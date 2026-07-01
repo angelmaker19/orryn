@@ -1,0 +1,5 @@
+# Configuration de déploiement Netlify pour Orryn
+# Le site est composé de fichiers statiques (HTML/CSS/JS), pas de build nécessaire.
+
+[build]
+  publish = "."

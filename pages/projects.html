@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orryn — Projets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="app-wrapper">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">O</div>
+
+    <a class="sidebar-nav-btn" data-page="dashboard" href="../index.html" title="Dashboard">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>
+    </a>
+    <a class="sidebar-nav-btn" data-page="tasks" href="tasks.html" title="Tâches">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+    </a>
+    <a class="sidebar-nav-btn" data-page="mindset" href="mindset.html" title="Mindset">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2a4.5 4.5 0 0 0-4.5 4.5c0 .76.18 1.47.5 2.1A4 4 0 0 0 4 12a4 4 0 0 0 1.5 3.1c-.32.6-.5 1.3-.5 2A3.9 3.9 0 0 0 9 21a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3z"/><path d="M15 2a4.5 4.5 0 0 1 4.5 4.5c0 .76-.18 1.47-.5 2.1A4 4 0 0 1 20 12a4 4 0 0 1-1.5 3.1c.32.6.5 1.3.5 2A3.9 3.9 0 0 1 15 21a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3z"/></svg>
+    </a>
+    <a class="sidebar-nav-btn" data-page="routine" href="routine.html" title="Routine">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.2-8.55"/><path d="M21 3v6h-6"/><path d="M12 7v5l3 2"/></svg>
+    </a>
+    <a class="sidebar-nav-btn active" data-page="projects" href="projects.html" title="Projets">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+    </a>
+
+    <div class="sidebar-spacer"></div>
+
+    <a class="sidebar-nav-btn settings-btn" title="Paramètres">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </a>
+    <div class="sidebar-avatar">SM</div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content" style="gap:32px;">
+
+    <!-- HEADER -->
+    <header class="page-header" style="align-items:flex-end;">
+      <div class="page-header-left">
+        <span class="page-header-eyebrow" id="proj-index"></span>
+        <h1>Mes projets.</h1>
+        <p class="page-header-tagline" id="proj-summary"></p>
+      </div>
+      <div class="page-header-right">
+        <div class="toggle-switch">
+          <div class="toggle-indicator"></div>
+          <button class="active">Perso</button>
+          <button>Pro</button>
+        </div>
+        <button class="btn-primary" id="btn-new-project">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          Nouveau projet
+        </button>
+      </div>
+    </header>
+
+    <!-- TABS -->
+    <div class="proj-tabs-wrap">
+      <button class="nav-arrow-btn" id="tab-scroll-left" style="border-radius:11px; width:36px; height:36px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <div class="proj-tabs" id="proj-tabs"></div>
+      <button class="nav-arrow-btn" id="tab-scroll-right" style="border-radius:11px; width:36px; height:36px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>
+
+    <!-- ACTIVE PROJECT -->
+    <div id="proj-detail" style="display:flex; flex-direction:column; gap:32px;">
+      <!-- Rempli par JS -->
+    </div>
+
+    <div id="proj-empty-state" style="display:none;" class="card">
+      <div class="proj-empty" style="padding:80px 24px;">
+        <p style="font-size:22px;">Aucun projet dans cet espace.</p>
+        <p style="font-family:Inter; font-size:13.5px; color:#6B7280; margin-top:8px;">Crée ton premier projet avec le bouton en haut.</p>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- MODAL NOUVEAU PROJET -->
+<div class="modal-overlay" id="project-modal">
+  <div class="modal" style="max-width:540px;">
+    <div class="modal-header">
+      <div>
+        <span class="section-eyebrow" id="proj-modal-eyebrow">Nouveau</span>
+        <h2 class="modal-title" style="font-size:28px;" id="proj-modal-title">Projet</h2>
+      </div>
+      <button class="modal-close" data-close-modal="project-modal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Nom du projet</label>
+      <input type="text" class="form-input" id="proj-draft-name" placeholder="Ex. Boutique solo">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Objectif principal</label>
+      <textarea class="form-textarea" id="proj-draft-obj" placeholder="Une phrase claire. Pas un paragraphe, juste l'essentiel."></textarea>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Couleur</label>
+      <div class="color-picker" id="proj-color-picker"></div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Icône</label>
+      <div class="icon-picker" id="proj-icon-picker"></div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Espace</label>
+      <div class="priority-selector" id="proj-scope-selector">
+        <button class="priority-btn normal active" data-scope="perso">Perso</button>
+        <button class="priority-btn normal" data-scope="pro">Pro</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Statut initial</label>
+      <div class="priority-selector" id="proj-status-selector">
+        <button class="priority-btn normal active" data-status="active">En cours</button>
+        <button class="priority-btn medium" data-status="paused">En pause</button>
+        <button class="priority-btn normal" data-status="done">Terminé</button>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn-ghost" data-close-modal="project-modal">Annuler</button>
+      <button class="btn-primary" id="btn-create-project">Créer le projet</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL MISE À JOUR PROGRESSION -->
+<div class="modal-overlay" id="goal-update-modal">
+  <div class="modal" style="max-width:420px;">
+    <div class="modal-header">
+      <div>
+        <span class="section-eyebrow">Progression</span>
+        <h2 class="modal-title" style="font-size:26px;" id="goal-update-title">Progression</h2>
+      </div>
+      <button class="modal-close" data-close-modal="goal-update-modal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Ajouter rapidement</label>
+      <div class="quick-add-row" id="quick-add-row"></div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Ou saisir la valeur exacte</label>
+      <input type="number" class="form-input" id="goal-update-current" min="0">
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn-ghost" data-close-modal="goal-update-modal">Annuler</button>
+      <button class="btn-primary" id="btn-save-goal-update">Enregistrer</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL OBJECTIF -->
+<div class="modal-overlay" id="goal-modal">
+  <div class="modal" style="max-width:480px;">
+    <div class="modal-header">
+      <div>
+        <span class="section-eyebrow">Objectif</span>
+        <h2 class="modal-title" style="font-size:28px;">Objectif</h2>
+      </div>
+      <button class="modal-close" data-close-modal="goal-modal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Que veux-tu atteindre ?</label>
+      <input type="text" class="form-input" id="goal-draft-label" placeholder="Ex. Chiffre d'affaires, Ventes, Abonnés…">
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px;">
+      <div class="form-group">
+        <label class="form-label">Actuel</label>
+        <input type="number" class="form-input" id="goal-draft-current" placeholder="0" min="0">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Cible</label>
+        <input type="number" class="form-input" id="goal-draft-target" placeholder="1000" min="0">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Unité</label>
+        <input type="text" class="form-input" id="goal-draft-unit" placeholder="€" list="unit-list">
+        <datalist id="unit-list">
+          <option value="€"></option>
+          <option value="ventes"></option>
+          <option value="clients"></option>
+          <option value="abonnés"></option>
+          <option value="users"></option>
+        </datalist>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Date cible</label>
+      <input type="text" class="form-input" id="goal-draft-due" placeholder="Ex. 30 sept., Q4 2026…">
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn-ghost" id="btn-clear-goal" style="margin-right:auto;">Retirer l'objectif</button>
+      <button class="btn-ghost" data-close-modal="goal-modal">Annuler</button>
+      <button class="btn-primary" id="btn-save-goal">Enregistrer</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL TÂCHE DE PROJET -->
+<div class="modal-overlay" id="ptask-modal">
+  <div class="modal" style="max-width:480px;">
+    <div class="modal-header">
+      <div>
+        <span class="section-eyebrow" id="ptask-modal-eyebrow">Nouveau</span>
+        <h2 class="modal-title" style="font-size:28px;" id="ptask-modal-title">Tâche</h2>
+      </div>
+      <button class="modal-close" data-close-modal="ptask-modal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Titre</label>
+      <input type="text" class="form-input" id="ptask-draft-title" placeholder="Ex. Wireframes onboarding">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Description <span style="color:#9CA3AF; font-weight:500; text-transform:none; letter-spacing:0;">— optionnel</span></label>
+      <textarea class="form-textarea" id="ptask-draft-desc" placeholder="Détails, sous-étapes…"></textarea>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Priorité</label>
+      <div class="priority-selector" id="ptask-priority-selector">
+        <button class="priority-btn urgent" data-tag="high">Urgent</button>
+        <button class="priority-btn medium active" data-tag="med">Moyen</button>
+        <button class="priority-btn normal" data-tag="low">Normal</button>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+      <div class="form-group">
+        <label class="form-label">Début</label>
+        <input type="date" class="form-input" id="ptask-draft-start">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Échéance</label>
+        <input type="date" class="form-input" id="ptask-draft-date">
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn-ghost" data-close-modal="ptask-modal">Annuler</button>
+      <button class="btn-primary" id="btn-save-ptask">Créer la tâche</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PANNEAU DÉTAIL TÂCHE (drawer latéral droit, façon Asana) ===== -->
+<div class="drawer-overlay" id="task-drawer-overlay"></div>
+<aside class="task-drawer" id="task-drawer" aria-hidden="true">
+  <div class="drawer-head">
+    <button class="drawer-done-btn" id="drawer-done">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      <span id="drawer-done-label">Marquer terminée</span>
+    </button>
+    <button class="drawer-close" id="drawer-close" title="Fermer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6" transform="rotate(180 12 12)"/></svg>
+    </button>
+  </div>
+
+  <div class="drawer-body" id="drawer-body">
+    <!-- Rempli par openTaskDrawer() -->
+  </div>
+</aside>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/supabase-config.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/auth.js"></script>
+<script>
+  let selectedId = null;
+  let draftScope = 'perso';
+  let draftStatus = 'active';
+  let editingProjId = null;       // projet en édition (null = création)
+  let projView = 'list';          // vue des tâches du projet : 'list' ou 'timeline'
+  let draftColor = '#059669';
+  let draftIcon = 'target';
+
+  /* Remplit les sélecteurs couleur + icône du modal projet */
+  function buildColorPicker() {
+    const c = document.getElementById('proj-color-picker');
+    c.innerHTML = ORRYN_PROJECT_COLORS.map(col =>
+      `<button type="button" class="color-dot${col === draftColor ? ' active' : ''}" data-color="${col}" style="background:${col};"></button>`
+    ).join('');
+    c.querySelectorAll('.color-dot').forEach(b => {
+      b.addEventListener('click', () => {
+        draftColor = b.dataset.color;
+        c.querySelectorAll('.color-dot').forEach(x => x.classList.remove('active'));
+        b.classList.add('active');
+        buildIconPicker(); // pour recolorer les icônes selon la couleur choisie
+      });
+    });
+  }
+  function buildIconPicker() {
+    const c = document.getElementById('proj-icon-picker');
+    c.innerHTML = Object.keys(ORRYN_ICONS).map(key =>
+      `<button type="button" class="icon-choice${key === draftIcon ? ' active' : ''}" data-icon="${key}" style="${key === draftIcon ? 'color:'+draftColor+'; border-color:'+draftColor : ''}">${orrynIconSvg(key, 18)}</button>`
+    ).join('');
+    c.querySelectorAll('.icon-choice').forEach(b => {
+      b.addEventListener('click', () => {
+        draftIcon = b.dataset.icon;
+        buildIconPicker();
+      });
+    });
+  }
+  let ptaskCtx = { projId: null, taskId: null, tag: 'med' }; // contexte tâche projet
+
+  const statusMap = {
+    active: { label: 'En cours',  dot: '#10B981', progress: '#059669' },
+    paused: { label: 'En pause',  dot: '#F59E0B', progress: '#F59E0B' },
+    late:   { label: 'En retard', dot: '#EF4444', progress: '#EF4444' },
+    done:   { label: 'Terminé',   dot: '#9CA3AF', progress: '#9CA3AF' },
+  };
+
+  const tagMap = {
+    high: { label: 'Urgent', bg: '#FEF2F2', color: '#DC2626' },
+    med:  { label: 'Moyen',  bg: '#FFFBEB', color: '#B45309' },
+    low:  { label: 'Normal', bg: '#F0F5F2', color: '#5B6B68' },
+  };
+
+  function scopedProjects() {
+    return OrrynData.projects.filter(p => p.scope === OrrynData.currentScope);
+  }
+
+  function formatDDay(d) {
+    if (d === 0) return "Aujourd'hui";
+    if (d > 0) return "Terminé";
+    return 'J' + d;
+  }
+
+  function shortDDay(d, status) {
+    if (status === 'done') return 'Terminé';
+    if (d === 0) return 'J-0';
+    return 'J' + d;
+  }
+
+  function dDayColor(d, status) {
+    // Couleurs choisies pour rester lisibles en mode Perso ET Pro,
+    // et distinguables pour une vision daltonienne (magenta / cyan / vert).
+    if (status === 'done')   return '#94A3B8';
+    if (status === 'paused') return '#94A3B8';
+    if (d >= -3 && d <= 0)   return '#EC4899'; // urgent : magenta vif
+    if (d >= -14 && d < -3)  return '#0EA5E9'; // proche : cyan vif
+    return '#10B981';                          // large : vert
+  }
+
+  function computeProgress(p) {
+    if (!p.tasks || p.tasks.length === 0) return p.progress || 0;
+    const done = p.tasks.filter(t => t.done).length;
+    return Math.round(done / p.tasks.length * 100);
+  }
+
+  /* SUMMARY HEADER */
+  function renderSummary() {
+    const list = scopedProjects();
+    const active = list.filter(p => p.status === 'active').length;
+    const paused = list.filter(p => p.status === 'paused').length;
+    const done   = list.filter(p => p.status === 'done').length;
+    const parts = [];
+    parts.push(`<strong style="color:var(--ink); font-weight:600;">${active} en cours</strong>`);
+    if (paused) parts.push(`${paused} en pause`);
+    if (done)   parts.push(`${done} terminé${done > 1 ? 's' : ''}`);
+    document.getElementById('proj-summary').innerHTML = parts.join(' · ');
+  }
+
+  /* TABS */
+  function renderTabs() {
+    const c = document.getElementById('proj-tabs');
+    c.innerHTML = '';
+    const list = scopedProjects();
+
+    list.forEach(p => {
+      const color = p.color || '#059669';
+      const btn = document.createElement('button');
+      btn.className = 'proj-tab' + (p.id === selectedId ? ' active' : '');
+      btn.innerHTML = `
+        <span class="tab-icon" style="background:${color}1A; color:${color};">${orrynIconSvg(p.icon || 'target', 14)}</span>
+        ${p.name}
+        <span class="tab-dday">${shortDDay(p.dDay, p.status)}</span>
+      `;
+      btn.addEventListener('click', () => {
+        selectedId = p.id;
+        renderTabs();
+        renderDetail();
+      });
+      c.appendChild(btn);
+    });
+  }
+
+  /* DETAIL */
+  function renderDetail() {
+    const detail = document.getElementById('proj-detail');
+    const empty = document.getElementById('proj-empty-state');
+    const list = scopedProjects();
+    const p = list.find(x => x.id === selectedId);
+
+    if (!p) {
+      detail.style.display = 'none';
+      empty.style.display = list.length === 0 ? 'block' : 'none';
+      return;
+    }
+    detail.style.display = 'flex';
+    empty.style.display = 'none';
+
+    const s = statusMap[p.status];
+    const progress = computeProgress(p);
+    const taskDone = p.tasks.filter(t => t.done).length;
+    const taskTotal = p.tasks.length;
+    const remaining = taskTotal - taskDone;
+
+    const todo = p.tasks.filter(t => !t.done);
+    const done = p.tasks.filter(t => t.done);
+
+    const taskRow = (t) => {
+      const tag = tagMap[t.tag];
+      const urgent = isTaskUrgent(t);
+      const rowCls = ('proj-task-row ' + urgentRowClass(t)).trim();
+      return `
+        <div class="${rowCls}" draggable="true" data-tid="${t.id}">
+          <span class="drag-handle" title="Glisser pour réordonner"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="9" cy="6" r="1.6"/><circle cx="15" cy="6" r="1.6"/><circle cx="9" cy="12" r="1.6"/><circle cx="15" cy="12" r="1.6"/><circle cx="9" cy="18" r="1.6"/><circle cx="15" cy="18" r="1.6"/></svg></span>
+          <button class="proj-task-check ${t.done ? 'done' : ''}" data-task="${t.id}" data-proj="${p.id}">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" style="display:${t.done ? '' : 'none'}"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+          <div class="proj-task-info" data-open-task="${t.id}" style="cursor:pointer;">
+            <div class="proj-task-titlerow">
+              <h4 class="proj-task-title ${t.done ? 'done' : ''}">${t.title}</h4>
+              ${t.done ? '' : `<span class="proj-task-tag" style="background:${tag.bg}; color:${tag.color};">${tag.label}</span>`}
+            </div>
+            <p class="proj-task-desc rich-text ${t.done ? 'done' : ''}">${t.desc}</p>
+          </div>
+          ${(() => {
+            if (t.done) return '<span class="proj-task-date done">Fait</span>';
+            const b = dueBadge(t.dueDate);
+            if (urgent) return urgentBadgeHtml(t);
+            return `<span class="proj-task-date" style="color:${b.color}; display:inline-flex; align-items:center; gap:6px; justify-content:flex-end;"><span style="width:6px;height:6px;border-radius:50%;background:${b.dotColor};"></span>${b.label}</span>`;
+          })()}
+          <div class="row-menu-wrap">
+            <button class="task-menu-btn" data-ptask-menu="${t.id}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
+            </button>
+            <div class="row-menu" data-ptask-menu-panel="${t.id}">
+              <button data-ptask-edit="${t.id}">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                Modifier
+              </button>
+              <button class="danger" data-ptask-delete="${t.id}">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg>
+                Supprimer
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+    };
+
+    if (!Array.isArray(p.resources)) p.resources = [];
+    const resourcesHtml = p.resources.length
+      ? p.resources.map((r, i) => {
+          const url = r.url || '#';
+          const label = r.label || url;
+          const letter = (label[0] || 'L').toUpperCase();
+          const safeHref = /^https?:\/\//.test(url) ? url : '#';
+          return `
+      <div class="proj-resource-row">
+        <a href="${safeHref}" target="_blank" rel="noopener" class="proj-resource">
+          <span class="letter">${letter}</span>
+          <span class="label">${label}</span>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#9CA3AF;"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </a>
+        <button class="proj-res-del" data-res-del="${i}" title="Supprimer">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>`;
+        }).join('')
+      : '<p class="proj-idea-empty">Aucune ressource. Ajoute un lien vers un outil, un doc, un site.</p>';
+
+    const activityHtml = p.activity.map(a => `
+      <div class="proj-activity-item">
+        <span class="adot" style="background:${a.dotColor};"></span>
+        <div>
+          <p>${a.label}</p>
+          <span class="when">${a.when}</span>
+        </div>
+      </div>
+    `).join('');
+
+    // IDÉES : on initialise depuis l'ancienne "note" au premier affichage, puis c'est éditable
+    if (!Array.isArray(p.ideas)) {
+      p.ideas = (p.note && p.note !== 'Aucune note pour le moment.')
+        ? [p.note]
+        : [];
+    }
+    const ideasHtml = p.ideas.length
+      ? p.ideas.map((idea, i) => `
+          <div class="proj-idea">
+            <span class="proj-idea-bullet"></span>
+            <span class="proj-idea-text">${idea}</span>
+            <button class="proj-idea-del" data-idea-del="${i}" title="Supprimer">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+          </div>
+        `).join('')
+      : '<p class="proj-idea-empty">Aucune idée pour l\'instant. Note tes pensées, pistes, rappels.</p>';
+
+    // Bloc OBJECTIF (cible chiffrée + valeur actuelle + date)
+    let goalHtml;
+    if (p.goal && p.goal.target) {
+      const g = p.goal;
+      const pct = g.target > 0 ? Math.min(100, Math.round(g.current / g.target * 100)) : 0;
+      const fmt = (n) => n.toLocaleString('fr-FR');
+      goalHtml = `
+        <section class="proj-goal">
+          <div class="proj-goal-head">
+            <div>
+              <span class="proj-goal-eyebrow">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                Objectif
+              </span>
+              <h3 class="proj-goal-label">${g.label}</h3>
+            </div>
+            <button class="proj-goal-edit" data-goal-edit="${p.id}" title="Modifier l'objectif">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            </button>
+          </div>
+          <div class="proj-goal-numbers">
+            <span class="current">${fmt(g.current)} ${g.unit}</span>
+            <span class="sep">/</span>
+            <span class="target">${fmt(g.target)} ${g.unit}</span>
+            <button class="proj-goal-update" data-goal-update="${p.id}">Mettre à jour</button>
+            <span class="pct">${pct}%</span>
+          </div>
+          <div class="proj-goal-bar"><div class="proj-goal-bar-fill" style="width:${pct}%;"></div></div>
+          <div class="proj-goal-foot">
+            <span class="due"><span class="cal-dot"></span>Échéance : ${g.dueLabel || '—'}</span>
+            <span class="remaining">${g.target - g.current > 0 ? 'Reste ' + fmt(g.target - g.current) + ' ' + g.unit : 'Objectif atteint 🎉'}</span>
+          </div>
+        </section>
+      `;
+    } else {
+      goalHtml = `
+        <section class="proj-goal-empty">
+          <p><strong>Aucun objectif défini.</strong> Fixe une cible chiffrée et datée pour piloter ce projet.</p>
+          <button class="btn-primary" data-goal-edit="${p.id}" style="padding:9px 16px; flex-shrink:0;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+            Définir l'objectif
+          </button>
+        </section>
+      `;
+    }
+
+    detail.innerHTML = `
+      <section>
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:16px;">
+          <div style="min-width:0; display:flex; gap:16px; align-items:flex-start;">
+            <div class="proj-icon-badge" style="background:${(p.color || '#059669')}1A; color:${p.color || '#059669'};">
+              ${orrynIconSvg(p.icon || 'target', 26)}
+            </div>
+            <div style="min-width:0;">
+              <div class="proj-status-line">
+                <span class="dot" style="background:${s.dot};"></span>
+                <span class="status">${s.label}</span>
+                <span class="sep"></span>
+                <span class="area">${p.area}</span>
+              </div>
+              <h2 class="proj-name">${p.name}.</h2>
+              <p class="proj-objective">${p.objective}</p>
+            </div>
+          </div>
+          <div class="row-menu-wrap" style="flex-shrink:0;">
+            <button class="notif-btn" data-proj-menu="${p.id}" style="width:40px; height:40px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
+            </button>
+            <div class="row-menu" data-proj-menu-panel="${p.id}">
+              <button data-proj-edit="${p.id}">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                Modifier le projet
+              </button>
+              <button class="danger" data-proj-delete="${p.id}">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg>
+                Supprimer le projet
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      ${goalHtml}
+
+      <section class="proj-stats">
+        <div class="proj-stat">
+          <span class="label">Échéance</span>
+          <span class="big">${p.deadlineShort}</span>
+          <span class="sub" style="color:${dDayColor(p.dDay, p.status)};">${formatDDay(p.dDay)}</span>
+        </div>
+        <div class="proj-stat">
+          <span class="label">Progression</span>
+          <div class="num-row"><span class="num">${progress}</span><span class="num-unit">%</span></div>
+          <div class="progress-bar" style="margin-top:2px;"><div class="progress-bar-fill" style="width:${progress}%; background:${s.progress};"></div></div>
+        </div>
+        <div class="proj-stat">
+          <span class="label">Tâches</span>
+          <div class="num-row"><span class="num">${taskDone}</span><span class="num-unit">/ ${taskTotal}</span></div>
+          <span class="subtext">${remaining} restante${remaining > 1 ? 's' : ''}</span>
+        </div>
+        <div class="proj-stat">
+          <span class="label">Démarré</span>
+          <span class="big">${p.startedShort}</span>
+          <span class="subtext">${p.age}</span>
+        </div>
+      </section>
+
+      <div class="proj-body">
+        <section>
+          <div class="section-header" style="margin-bottom:18px;">
+            <div>
+              <span class="section-eyebrow">Tâches</span>
+              <h3 class="section-title" style="font-size:24px;">À faire ensuite</h3>
+            </div>
+            <div class="view-switch">
+              <button class="view-btn${projView === 'list' ? ' active' : ''}" data-view="list">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                Liste
+              </button>
+              <button class="view-btn${projView === 'timeline' ? ' active' : ''}" data-view="timeline">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="7" width="6" height="3" rx="1"/><rect x="11" y="13" width="8" height="3" rx="1"/></svg>
+                Timeline
+              </button>
+            </div>
+          </div>
+
+          <div class="proj-tasks-card" style="${projView === 'timeline' ? 'display:none;' : ''}">
+            <div class="proj-task-group">
+              <span class="glabel">À faire</span>
+              <span class="gcount">${todo.length}</span>
+            </div>
+            ${todo.length ? todo.map(taskRow).join('') : '<div class="proj-empty"><p>Rien à faire ici. Bravo.</p></div>'}
+
+            ${done.length ? `
+              <div class="proj-task-group with-top-border">
+                <span class="glabel">Terminées</span>
+                <span class="gcount">${done.length}</span>
+              </div>
+              ${done.map(taskRow).join('')}
+            ` : ''}
+
+            <button class="proj-add-task" data-add-task="${p.id}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+              Ajouter une tâche
+            </button>
+          </div>
+
+          <div class="timeline-card card" id="timeline-card" style="${projView === 'timeline' ? '' : 'display:none;'}">
+            <!-- Rempli par renderTimeline() -->
+          </div>
+        </section>
+
+        <aside class="proj-side">
+          <section class="proj-side-card">
+            <div class="proj-side-head">
+              <h3 class="proj-side-title">Idées</h3>
+              <span style="font-size:11px; color:#9CA3AF; font-weight:600;">${p.ideas.length}</span>
+            </div>
+            <div class="proj-ideas-list">${ideasHtml}</div>
+            <div class="proj-idea-add">
+              <input type="text" id="idea-input" class="proj-idea-input" placeholder="Ajouter une idée…">
+              <button class="proj-idea-add-btn" id="idea-add-btn" title="Ajouter">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </section>
+
+          <section class="proj-side-card">
+            <h3 class="proj-side-title" style="margin-bottom:14px;">Ressources</h3>
+            <div style="display:flex; flex-direction:column; gap:2px; margin-bottom:14px;">${resourcesHtml}</div>
+            <div class="proj-idea-add" style="flex-direction:column; gap:8px; align-items:stretch;">
+              <input type="text" id="res-label-input" class="proj-idea-input" placeholder="Nom (ex : Store Shopify)">
+              <div style="display:flex; gap:8px;">
+                <input type="text" id="res-url-input" class="proj-idea-input" placeholder="https://…">
+                <button class="proj-idea-add-btn" id="res-add-btn" title="Ajouter la ressource">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section class="proj-side-card">
+            <h3 class="proj-side-title" style="margin-bottom:14px;">Activité récente</h3>
+            <div style="display:flex; flex-direction:column; gap:14px;">${activityHtml}</div>
+          </section>
+        </aside>
+      </div>
+    `;
+
+    // index header
+    const idx = list.findIndex(x => x.id === p.id) + 1;
+    document.getElementById('proj-index').textContent = `Projet ${idx} / ${list.length}`;
+
+    bindTaskChecks();
+    bindAddTask();
+    bindProjMenus();
+    bindPTaskMenus();
+    bindGoalEdit();
+    bindIdeas();
+    bindViewSwitch();
+    bindProjTaskReorder(p);
+    // Clic sur le corps d'une tâche (liste) → ouvre le drawer détail
+    document.querySelectorAll('[data-open-task]').forEach(el => {
+      el.addEventListener('click', () => openTaskDrawer(p.id, el.dataset.openTask));
+    });
+    if (projView === 'timeline') renderTimeline();
+  }
+
+  /* Point 6 : glisser-déposer pour réordonner les tâches d'un projet (vue liste) */
+  function bindProjTaskReorder(proj) {
+    const card = document.querySelector('.proj-tasks-card');
+    if (!card) return;
+    // Ordre des ids visibles dans le DOM (todo puis done)
+    const rowIds = () => Array.from(card.querySelectorAll('.proj-task-row[data-tid]')).map(r => r.dataset.tid);
+    enableListReorder(card, '.proj-task-row[data-tid]', (from, to) => {
+      const ids = rowIds();
+      const movedId = ids[from], targetId = ids[to];
+      const arr = proj.tasks;
+      const mi = arr.findIndex(t => t.id === movedId);
+      if (mi < 0) return;
+      const [moved] = arr.splice(mi, 1);
+      let ti = arr.findIndex(t => t.id === targetId);
+      if (ti < 0) ti = arr.length;
+      arr.splice(ti, 0, moved);
+      persistOrryn();
+      renderDetail();
+    });
+  }
+
+  /* SÉLECTEUR DE VUE Liste / Timeline */
+  function bindViewSwitch() {
+    document.querySelectorAll('.view-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        // closest pour gérer le clic sur le SVG/texte à l'intérieur du bouton
+        const target = e.currentTarget.dataset.view;
+        if (!target || target === projView) return;
+        projView = target;
+        renderDetail();
+      });
+    });
+  }
+
+  /* ===== TIMELINE (Gantt) : barres de tâches sur une grille de jours ===== */
+  function isoToDate(iso) { const d = new Date(iso + 'T00:00:00'); d.setHours(0,0,0,0); return d; }
+  function dateToIso(d) { return d.toISOString().slice(0, 10); }
+  function diffDays(a, b) { return Math.round((isoToDate(b) - isoToDate(a)) / 86400000); }
+
+  function renderTimeline() {
+    const proj = OrrynData.projects.find(p => p.id === selectedId);
+    const card = document.getElementById('timeline-card');
+    if (!proj || !card) return;
+
+    const DAY_W = 40;            // largeur d'une colonne (1 jour)
+    const ROW_H = 44;            // hauteur d'une ligne (1 tâche)
+    const LABEL_W = 200;         // largeur de la colonne des noms à gauche
+    const TOTAL_DAYS = 98;       // ~14 semaines (assez de marge pour glisser loin)
+
+    // La grille démarre 7 jours avant aujourd'hui
+    const start = new Date(); start.setHours(0,0,0,0); start.setDate(start.getDate() - 7);
+    const startIso = dateToIso(start);
+    // Date de fin de la grille (borne pour le drag)
+    const gridEnd = new Date(start); gridEnd.setDate(start.getDate() + TOTAL_DAYS - 1);
+    const endIso = dateToIso(gridEnd);
+
+    const tasks = proj.tasks || [];
+    const months = ['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+    const wd = ['D','L','M','M','J','V','S'];
+
+    // En-tête : colonnes de jours, avec séparateurs de semaine + libellé de mois
+    let head = '';
+    let monthRow = '';
+    let lastMonth = -1;
+    for (let i = 0; i < TOTAL_DAYS; i++) {
+      const d = new Date(start); d.setDate(start.getDate() + i);
+      const isToday = d.toDateString() === new Date().toDateString();
+      const isWeekend = d.getDay() === 0 || d.getDay() === 6;
+      const weekStart = d.getDay() === 1;
+      if (d.getMonth() !== lastMonth) {
+        monthRow += `<div class="tl-month" style="left:${LABEL_W + i*DAY_W}px;">${months[d.getMonth()]}</div>`;
+        lastMonth = d.getMonth();
+      }
+      head += `<div class="tl-daycol${isToday ? ' today' : ''}${isWeekend ? ' weekend' : ''}${weekStart ? ' wstart' : ''}" style="left:${LABEL_W + i*DAY_W}px; width:${DAY_W}px;">
+        <span class="tl-wd">${wd[d.getDay()]}</span><span class="tl-dn">${d.getDate()}</span>
+      </div>`;
+    }
+
+    // Lignes de tâches + barres
+    let rows = '';
+    let bars = '';
+    tasks.forEach((t, i) => {
+      const ts = t.start || startIso;
+      const te = t.end || t.start || startIso;
+      let offset = diffDays(startIso, ts);
+      let span = Math.max(1, diffDays(ts, te) + 1);
+      const color = proj.color || '#059669';
+      const top = i * ROW_H;
+
+      const urgent = isTaskUrgent(t);
+      const late = isTaskLate(t);
+      const barColor = t.done ? '#64748B' : (late ? '#EF4444' : (urgent ? '#EC4899' : color));
+      const barMod = t.done ? ' done' : (late ? ' tl-bar-late' : (urgent ? ' tl-bar-urgent' : ''));
+      const dotCls = late ? 'tl-late-dot' : 'tl-urgent-dot';
+      const prefix = t.done ? '' : (late ? '⚠ ' : (urgent ? '⚡ ' : ''));
+
+      rows += `<div class="tl-rowlabel" style="top:${top}px; height:${ROW_H}px; width:${LABEL_W}px;" title="${t.title}">
+        <button class="tl-check ${t.done ? 'done' : ''}" data-tl-check="${t.id}" title="${t.done ? 'Marquer à faire' : 'Marquer terminée'}">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" style="display:${t.done ? '' : 'none'}"><polyline points="20 6 9 17 4 12"/></svg>
+        </button>
+        <span class="tl-rowlabel-text ${t.done ? 'done' : ''}">${(urgent && !t.done) ? `<span class="${dotCls}"></span>` : ''}${t.title}</span>
+      </div>`;
+
+      bars += `<div class="tl-bar${barMod}" data-task="${t.id}"
+        style="top:${top + 8}px; left:${LABEL_W + offset*DAY_W + 3}px; width:${span*DAY_W - 6}px; height:${ROW_H - 16}px; background:${barColor};">
+        <span class="tl-handle tl-handle-l" data-edge="start"></span>
+        <span class="tl-bar-check ${t.done ? 'done' : ''}" data-tl-barcheck="${t.id}">
+          <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" style="display:${t.done ? '' : 'none'}"><polyline points="20 6 9 17 4 12"/></svg>
+        </span>
+        <span class="tl-bar-label">${prefix}${t.title}</span>
+        <span class="tl-handle tl-handle-r" data-edge="end"></span>
+      </div>`;
+    });
+
+    const gridW = LABEL_W + TOTAL_DAYS * DAY_W;
+    const gridH = Math.max(tasks.length * ROW_H, ROW_H);
+
+    card.innerHTML = `
+      <div class="tl-topbar">
+        <button class="tl-back-btn" id="tl-back-list">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          Revenir à la liste
+        </button>
+        <span class="tl-hint">Glisse une barre pour la déplacer · tire ses bords pour changer début / fin</span>
+      </div>
+      <div class="tl-scroll">
+        <div class="tl-grid" style="width:${gridW}px; height:${gridH + 48}px;">
+          <div class="tl-header" style="width:${gridW}px;">
+            <div class="tl-monthrow">${monthRow}</div>
+            ${head}
+          </div>
+          <div class="tl-body" style="top:48px; width:${gridW}px; height:${gridH}px;">
+            ${rows}
+            ${bars}
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Bouton "Revenir à la liste" (garantit toujours un retour possible)
+    const backBtn = document.getElementById('tl-back-list');
+    if (backBtn) backBtn.addEventListener('click', () => { projView = 'list'; renderDetail(); });
+
+    // Cocher / décocher une tâche depuis la colonne de gauche
+    card.querySelectorAll('[data-tl-check]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const t = proj.tasks.find(x => x.id === btn.dataset.tlCheck);
+        if (!t) return;
+        t.done = !t.done;
+        persistOrryn();
+        renderTimeline();
+      });
+    });
+    // Cocher / décocher directement depuis la barre
+    card.querySelectorAll('[data-tl-barcheck]').forEach(btn => {
+      btn.addEventListener('pointerdown', (e) => e.stopPropagation());
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const t = proj.tasks.find(x => x.id === btn.dataset.tlBarcheck);
+        if (!t) return;
+        t.done = !t.done;
+        persistOrryn();
+        renderTimeline();
+      });
+    });
+
+    bindTimelineDrag(proj, { DAY_W, LABEL_W, startIso, endIso });
+  }
+
+  /* Drag d'une barre (déplacer) + poignées (redimensionner) */
+  function bindTimelineDrag(proj, cfg) {
+    const card = document.getElementById('timeline-card');
+    card.querySelectorAll('.tl-bar').forEach(bar => {
+      const taskId = bar.dataset.task;
+      const task = proj.tasks.find(t => t.id === taskId);
+
+      // clic simple (sans drag) = ouvrir le détail
+      let moved = false;
+
+      bar.addEventListener('pointerdown', (e) => {
+        const edge = e.target.dataset.edge; // 'start', 'end', ou undefined (corps = déplacer)
+        const startX = e.clientX;
+        const origStart = task.start, origEnd = task.end;
+        moved = false;
+        bar.setPointerCapture(e.pointerId);
+        bar.classList.add('dragging');
+
+        const onMove = (ev) => {
+          const deltaDays = Math.round((ev.clientX - startX) / cfg.DAY_W);
+          if (deltaDays !== 0) moved = true;
+          if (edge === 'start') {
+            let ns = shiftIso(origStart, deltaDays);
+            // borne : pas avant le début de grille, pas après la fin de tâche
+            if (diffDays(cfg.startIso, ns) >= 0 && diffDays(ns, task.end) >= 0) task.start = ns;
+          } else if (edge === 'end') {
+            let ne = shiftIso(origEnd, deltaDays);
+            // borne : pas avant le début de tâche, pas après la fin de grille
+            if (diffDays(task.start, ne) >= 0 && diffDays(ne, cfg.endIso) >= 0) task.end = ne;
+          } else {
+            let ns = shiftIso(origStart, deltaDays);
+            let ne = shiftIso(origEnd, deltaDays);
+            // borne : garder toute la barre dans la grille
+            if (diffDays(cfg.startIso, ns) >= 0 && diffDays(ne, cfg.endIso) >= 0) {
+              task.start = ns;
+              task.end = ne;
+            }
+          }
+          // repositionne visuellement sans tout re-rendre
+          repositionBar(bar, task, cfg);
+        };
+        const onUp = () => {
+          bar.classList.remove('dragging');
+          bar.releasePointerCapture(e.pointerId);
+          window.removeEventListener('pointermove', onMove);
+          window.removeEventListener('pointerup', onUp);
+          if (!moved) {
+            openTaskDrawer(proj.id, taskId); // clic = ouvrir le détail (drawer)
+          } else {
+            // synchronise dueDate sur la fin, sauvegarde et rafraîchit
+            task.dueDate = task.end;
+            persistOrryn();
+          }
+        };
+        window.addEventListener('pointermove', onMove);
+        window.addEventListener('pointerup', onUp);
+        e.preventDefault();
+      });
+    });
+  }
+
+  function shiftIso(iso, days) {
+    const d = isoToDate(iso); d.setDate(d.getDate() + days); return dateToIso(d);
+  }
+  function repositionBar(bar, task, cfg) {
+    const offset = diffDays(cfg.startIso, task.start);
+    const span = Math.max(1, diffDays(task.start, task.end) + 1);
+    bar.style.left = (cfg.LABEL_W + offset * cfg.DAY_W + 3) + 'px';
+    bar.style.width = (span * cfg.DAY_W - 6) + 'px';
+  }
+
+  /* ===== PANNEAU DÉTAIL TÂCHE (drawer latéral, façon Asana) ===== */
+  let drawerCtx = { projId: null, taskId: null };
+
+  function openTaskDrawer(projId, taskId) {
+    const proj = OrrynData.projects.find(p => p.id === projId);
+    const t = proj && proj.tasks.find(x => x.id === taskId);
+    if (!t) return;
+    drawerCtx = { projId, taskId };
+
+    // valeurs par défaut des nouveaux champs
+    if (!Array.isArray(t.subtasks)) t.subtasks = [];
+    if (!Array.isArray(t.links)) t.links = [];
+    if (typeof t.notes !== 'string') t.notes = '';
+
+    renderDrawer();
+    const overlay = document.getElementById('task-drawer-overlay');
+    const drawer = document.getElementById('task-drawer');
+    overlay.classList.add('open');
+    drawer.classList.add('open');
+    drawer.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeTaskDrawer() {
+    const overlay = document.getElementById('task-drawer-overlay');
+    const drawer = document.getElementById('task-drawer');
+    overlay.classList.remove('open');
+    drawer.classList.remove('open');
+    drawer.setAttribute('aria-hidden', 'true');
+    // sauvegarder les modifications faites dans le drawer (notes, sous-tâches, liens, dates…)
+    persistOrryn();
+    // rafraîchir la vue projet (au cas où des dates/statuts ont changé)
+    renderDetail();
+  }
+
+  function currentDrawerTask() {
+    const proj = OrrynData.projects.find(p => p.id === drawerCtx.projId);
+    return proj ? proj.tasks.find(x => x.id === drawerCtx.taskId) : null;
+  }
+
+  function renderDrawer() {
+    const t = currentDrawerTask();
+    if (!t) return;
+    const body = document.getElementById('drawer-body');
+
+    // Bouton "terminée"
+    const doneBtn = document.getElementById('drawer-done');
+    doneBtn.classList.toggle('done', !!t.done);
+    document.getElementById('drawer-done-label').textContent = t.done ? 'Terminée' : 'Marquer terminée';
+
+    const subDone = t.subtasks.filter(s => s.done).length;
+
+    body.innerHTML = `
+      <textarea class="drawer-title" id="dw-title" rows="1">${t.title}</textarea>
+
+      <div class="drawer-field">
+        <span class="drawer-field-label">Échéance</span>
+        <div class="drawer-field-value">
+          <div class="drawer-dates">
+            <input type="date" class="drawer-input" id="dw-start" value="${t.start || ''}" title="Début">
+            <input type="date" class="drawer-input" id="dw-end" value="${t.end || t.dueDate || ''}" title="Fin">
+          </div>
+        </div>
+      </div>
+
+      <div class="drawer-field">
+        <span class="drawer-field-label">Priorité</span>
+        <div class="drawer-field-value">
+          <div class="drawer-prio" id="dw-prio">
+            <button class="drawer-prio-btn urgent${t.tag==='high'?' active':''}" data-tag="high">Urgent</button>
+            <button class="drawer-prio-btn med${t.tag==='med'?' active':''}" data-tag="med">Moyen</button>
+            <button class="drawer-prio-btn low${t.tag==='low'?' active':''}" data-tag="low">Normal</button>
+          </div>
+        </div>
+      </div>
+
+      <hr class="drawer-divider">
+
+      <div>
+        <div class="drawer-section-title">Description</div>
+        <div class="drawer-rte-toolbar">
+          <button type="button" data-rte="dw-desc" data-cmd="bold" title="Gras"><b>G</b></button>
+          <button type="button" data-rte="dw-desc" data-cmd="italic" title="Italique"><i>I</i></button>
+          <button type="button" data-rte="dw-desc" data-cmd="hilite" title="Surligner"><span class="rte-hl">S</span></button>
+        </div>
+        <div class="drawer-rte rich-text" id="dw-desc" contenteditable="true" data-placeholder="Ajoute du contexte, des détails…">${t.desc === 'Nouvelle tâche.' ? '' : t.desc}</div>
+      </div>
+
+      <div>
+        <div class="drawer-section-title">Sous-tâches <span class="count">${subDone} / ${t.subtasks.length}</span></div>
+        <div id="dw-subtasks">${renderSubtasks(t)}</div>
+        <div class="subtask-add">
+          <input type="text" id="dw-subtask-input" placeholder="Ajouter une sous-tâche…">
+          <button id="dw-subtask-add"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button>
+        </div>
+      </div>
+
+      <div>
+        <div class="drawer-section-title">Notes</div>
+        <div class="drawer-rte-toolbar">
+          <button type="button" data-rte="dw-notes" data-cmd="bold" title="Gras"><b>G</b></button>
+          <button type="button" data-rte="dw-notes" data-cmd="italic" title="Italique"><i>I</i></button>
+          <button type="button" data-rte="dw-notes" data-cmd="hilite" title="Surligner"><span class="rte-hl">S</span></button>
+        </div>
+        <div class="drawer-rte rich-text" id="dw-notes" contenteditable="true" data-placeholder="Notes libres, avancement, idées…">${t.notes || ''}</div>
+      </div>
+
+      <div>
+        <div class="drawer-section-title">Liens</div>
+        <div id="dw-links">${renderLinks(t)}</div>
+        <div class="subtask-add">
+          <input type="text" id="dw-link-input" placeholder="Coller un lien (Figma, doc…)">
+          <button id="dw-link-add"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button>
+        </div>
+      </div>
+    `;
+
+    bindDrawerInteractions();
+  }
+
+  function renderSubtasks(t) {
+    if (!t.subtasks.length) return '<p style="font-size:13px; color:var(--ink-2); margin:0 0 4px;">Aucune sous-tâche.</p>';
+    return t.subtasks.map((s, i) => `
+      <div class="subtask-row">
+        <span class="subtask-check ${s.done ? 'done' : ''}" data-sub-toggle="${i}">
+          ${s.done ? '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' : ''}
+        </span>
+        <span class="subtask-text ${s.done ? 'done' : ''}">${s.text}</span>
+        <button class="subtask-del" data-sub-del="${i}"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      </div>
+    `).join('');
+  }
+
+  function renderLinks(t) {
+    if (!t.links.length) return '<p style="font-size:13px; color:var(--ink-2); margin:0 0 4px;">Aucun lien.</p>';
+    return t.links.map((url, i) => {
+      let label = url.replace(/^https?:\/\//, '').replace(/^www\./, '');
+      if (label.length > 38) label = label.slice(0, 38) + '…';
+      const letter = (label[0] || '?').toUpperCase();
+      return `
+        <a href="${url}" target="_blank" rel="noopener" class="drawer-link">
+          <span class="lk-letter">${letter}</span>
+          <span class="lk-label">${label}</span>
+          <button class="drawer-link-del" data-link-del="${i}" onclick="event.preventDefault();"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+        </a>
+      `;
+    }).join('');
+  }
+
+  function bindDrawerInteractions() {
+    const t = currentDrawerTask();
+    if (!t) return;
+
+    // Titre auto-resize + sauvegarde
+    const titleEl = document.getElementById('dw-title');
+    const autosize = () => { titleEl.style.height = 'auto'; titleEl.style.height = titleEl.scrollHeight + 'px'; };
+    autosize();
+    titleEl.addEventListener('input', () => { t.title = titleEl.value; autosize(); });
+
+    // Dates
+    document.getElementById('dw-start').addEventListener('change', e => { t.start = e.target.value || t.start; });
+    document.getElementById('dw-end').addEventListener('change', e => { t.end = e.target.value || t.end; t.dueDate = t.end; });
+
+    // Priorité
+    document.querySelectorAll('#dw-prio .drawer-prio-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        t.tag = btn.dataset.tag;
+        document.querySelectorAll('#dw-prio .drawer-prio-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+
+    // Description + notes
+    document.getElementById('dw-desc').addEventListener('input', e => { t.desc = e.currentTarget.innerHTML.trim() || 'Nouvelle tâche.'; });
+    document.getElementById('dw-notes').addEventListener('input', e => { t.notes = e.currentTarget.innerHTML; });
+    // Barres d'outils texte riche du drawer (desc + notes)
+    document.querySelectorAll('.drawer-rte-toolbar [data-rte]').forEach(btn => {
+      btn.addEventListener('mousedown', (e) => {
+        e.preventDefault();
+        const target = document.getElementById(btn.dataset.rte);
+        target.focus();
+        applyRteCommand(btn.dataset.cmd);
+        if (btn.dataset.rte === 'dw-desc') t.desc = target.innerHTML.trim() || 'Nouvelle tâche.';
+        else t.notes = target.innerHTML;
+      });
+    });
+
+    // Sous-tâches : ajout
+    const subInput = document.getElementById('dw-subtask-input');
+    const addSub = () => {
+      const v = subInput.value.trim();
+      if (!v) return;
+      t.subtasks.push({ text: v, done: false });
+      renderDrawer();
+    };
+    document.getElementById('dw-subtask-add').addEventListener('click', addSub);
+    subInput.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); addSub(); } });
+
+    // Sous-tâches : toggle / suppr
+    document.querySelectorAll('[data-sub-toggle]').forEach(el => {
+      el.addEventListener('click', () => { const i = +el.dataset.subToggle; t.subtasks[i].done = !t.subtasks[i].done; renderDrawer(); });
+    });
+    document.querySelectorAll('[data-sub-del]').forEach(el => {
+      el.addEventListener('click', () => { t.subtasks.splice(+el.dataset.subDel, 1); renderDrawer(); });
+    });
+
+    // Liens : ajout
+    const linkInput = document.getElementById('dw-link-input');
+    const addLink = () => {
+      let v = linkInput.value.trim();
+      if (!v) return;
+      if (!/^https?:\/\//.test(v)) v = 'https://' + v;
+      t.links.push(v);
+      renderDrawer();
+    };
+    document.getElementById('dw-link-add').addEventListener('click', addLink);
+    linkInput.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); addLink(); } });
+    document.querySelectorAll('[data-link-del]').forEach(el => {
+      el.addEventListener('click', () => { t.links.splice(+el.dataset.linkDel, 1); renderDrawer(); });
+    });
+  }
+
+  // Bouton "terminée" + fermeture
+  document.getElementById('drawer-done').addEventListener('click', () => {
+    const t = currentDrawerTask(); if (!t) return;
+    t.done = !t.done;
+    persistOrryn();
+    renderDrawer();
+  });
+  document.getElementById('drawer-close').addEventListener('click', closeTaskDrawer);
+  document.getElementById('task-drawer-overlay').addEventListener('click', closeTaskDrawer);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && document.getElementById('task-drawer').classList.contains('open')) closeTaskDrawer();
+  });
+
+  /* IDÉES du projet (ajout / suppression) */
+  function bindIdeas() {
+    const proj = OrrynData.projects.find(p => p.id === selectedId);
+    if (!proj) return;
+
+    const input = document.getElementById('idea-input');
+    const addBtn = document.getElementById('idea-add-btn');
+
+    const addIdea = () => {
+      const val = input.value.trim();
+      if (!val) { input.focus(); return; }
+      if (!Array.isArray(proj.ideas)) proj.ideas = [];
+      proj.ideas.push(val);
+      persistOrryn();
+      renderDetail();
+    };
+
+    if (addBtn) addBtn.addEventListener('click', addIdea);
+    if (input) input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') { e.preventDefault(); addIdea(); }
+    });
+
+    document.querySelectorAll('[data-idea-del]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const idx = parseInt(btn.dataset.ideaDel);
+        proj.ideas.splice(idx, 1);
+        persistOrryn();
+        renderDetail();
+      });
+    });
+
+    // RESSOURCES (point 13) : ajouter un lien nommé
+    const resLabel = document.getElementById('res-label-input');
+    const resUrl = document.getElementById('res-url-input');
+    const resBtn = document.getElementById('res-add-btn');
+    const addRes = () => {
+      let url = (resUrl.value || '').trim();
+      const label = (resLabel.value || '').trim();
+      if (!url && !label) { resLabel.focus(); return; }
+      if (url && !/^https?:\/\//.test(url)) url = 'https://' + url;
+      if (!Array.isArray(proj.resources)) proj.resources = [];
+      proj.resources.push({ label: label || url, url: url || '#' });
+      persistOrryn();
+      renderDetail();
+    };
+    if (resBtn) resBtn.addEventListener('click', addRes);
+    [resLabel, resUrl].forEach(el => el && el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') { e.preventDefault(); addRes(); }
+    }));
+
+    document.querySelectorAll('[data-res-del]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const idx = parseInt(btn.dataset.resDel);
+        proj.resources.splice(idx, 1);
+        persistOrryn();
+        renderDetail();
+      });
+    });
+  }
+
+  /* OBJECTIF */
+  function bindGoalEdit() {
+    document.querySelectorAll('[data-goal-edit]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openGoalModal(parseInt(btn.dataset.goalEdit));
+      });
+    });
+    document.querySelectorAll('[data-goal-update]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openGoalUpdateModal(parseInt(btn.dataset.goalUpdate));
+      });
+    });
+  }
+
+  /* MISE À JOUR RAPIDE DE LA PROGRESSION */
+  let goalUpdateProjId = null;
+  function openGoalUpdateModal(projId) {
+    goalUpdateProjId = projId;
+    const p = OrrynData.projects.find(x => x.id === projId);
+    const g = p.goal;
+    document.getElementById('goal-update-title').textContent = g.label;
+    document.getElementById('goal-update-current').value = g.current;
+
+    // boutons rapides adaptés à l'échelle de la cible
+    const steps = g.target >= 5000 ? [10, 50, 100, 500]
+                : g.target >= 500  ? [5, 10, 50, 100]
+                : g.target >= 50   ? [1, 5, 10, 25]
+                :                    [1, 2, 5, 10];
+    const row = document.getElementById('quick-add-row');
+    row.innerHTML = steps.map(s => `<button class="quick-add-btn" data-step="${s}">+${s}</button>`).join('');
+    row.querySelectorAll('.quick-add-btn').forEach(b => {
+      b.addEventListener('click', () => {
+        const input = document.getElementById('goal-update-current');
+        input.value = (parseFloat(input.value) || 0) + parseFloat(b.dataset.step);
+      });
+    });
+
+    openModal('goal-update-modal');
+  }
+
+  document.getElementById('btn-save-goal-update').addEventListener('click', () => {
+    const p = OrrynData.projects.find(x => x.id === goalUpdateProjId);
+    const val = parseFloat(document.getElementById('goal-update-current').value);
+    if (isNaN(val) || val < 0) { document.getElementById('goal-update-current').focus(); return; }
+    p.goal.current = val;
+    closeModal('goal-update-modal');
+    renderDetail();
+  });
+
+  let goalProjId = null;
+  function openGoalModal(projId) {
+    goalProjId = projId;
+    const p = OrrynData.projects.find(x => x.id === projId);
+    const g = p.goal || {};
+    document.getElementById('goal-draft-label').value = g.label || '';
+    document.getElementById('goal-draft-current').value = (g.current ?? '');
+    document.getElementById('goal-draft-target').value = (g.target ?? '');
+    document.getElementById('goal-draft-unit').value = g.unit || '';
+    document.getElementById('goal-draft-due').value = g.dueLabel || '';
+    document.getElementById('btn-clear-goal').style.display = p.goal ? '' : 'none';
+    openModal('goal-modal');
+    setTimeout(() => document.getElementById('goal-draft-label').focus(), 100);
+  }
+
+  document.getElementById('btn-save-goal').addEventListener('click', () => {
+    const p = OrrynData.projects.find(x => x.id === goalProjId);
+    const label = document.getElementById('goal-draft-label').value.trim();
+    const target = parseFloat(document.getElementById('goal-draft-target').value);
+    if (!label) { document.getElementById('goal-draft-label').focus(); return; }
+    if (!target || target <= 0) { document.getElementById('goal-draft-target').focus(); return; }
+    const current = parseFloat(document.getElementById('goal-draft-current').value) || 0;
+    const unit = document.getElementById('goal-draft-unit').value.trim() || '';
+    const dueLabel = document.getElementById('goal-draft-due').value.trim() || '—';
+    p.goal = { label, current, target, unit, dueLabel };
+    closeModal('goal-modal');
+    renderDetail();
+  });
+
+  document.getElementById('btn-clear-goal').addEventListener('click', () => {
+    const p = OrrynData.projects.find(x => x.id === goalProjId);
+    if (confirm("Retirer l'objectif de ce projet ?")) {
+      p.goal = null;
+      closeModal('goal-modal');
+      renderDetail();
+    }
+  });
+
+  function closeAllMenus() {
+    document.querySelectorAll('.row-menu.open').forEach(m => m.classList.remove('open'));
+  }
+  document.addEventListener('click', () => closeAllMenus());
+
+  function bindTaskChecks() {
+    document.querySelectorAll('.proj-task-check').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const projId = btn.dataset.proj;
+        const taskId = btn.dataset.task;
+        const proj = OrrynData.projects.find(p => String(p.id) === String(projId));
+        if (!proj) return;
+        const task = proj.tasks.find(t => t.id === taskId);
+        if (!task) return;
+        task.done = !task.done;
+        persistOrryn();
+        renderDetail();
+      });
+    });
+  }
+
+  function bindAddTask() {
+    document.querySelectorAll('[data-add-task]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        openPTaskModal(parseInt(btn.dataset.addTask), null);
+      });
+    });
+  }
+
+  /* MENU PROJET (modifier / supprimer le projet) */
+  function bindProjMenus() {
+    document.querySelectorAll('[data-proj-menu]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = btn.dataset.projMenu;
+        const menu = document.querySelector(`[data-proj-menu-panel="${id}"]`);
+        const wasOpen = menu.classList.contains('open');
+        closeAllMenus();
+        if (!wasOpen) menu.classList.add('open');
+      });
+    });
+    document.querySelectorAll('[data-proj-edit]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeAllMenus();
+        openEditProject(parseInt(btn.dataset.projEdit));
+      });
+    });
+    document.querySelectorAll('[data-proj-delete]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeAllMenus();
+        const id = parseInt(btn.dataset.projDelete);
+        const proj = OrrynData.projects.find(p => p.id === id);
+        if (confirm(`Supprimer le projet « ${proj.name} » et toutes ses tâches ?`)) {
+          const idx = OrrynData.projects.findIndex(p => p.id === id);
+          OrrynData.projects.splice(idx, 1);
+          const list = scopedProjects();
+          selectedId = list.length ? list[0].id : null;
+          refreshAll();
+        }
+      });
+    });
+  }
+
+  /* MENU TÂCHE DE PROJET */
+  function bindPTaskMenus() {
+    const proj = OrrynData.projects.find(p => p.id === selectedId);
+    document.querySelectorAll('[data-ptask-menu]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = btn.dataset.ptaskMenu;
+        const menu = document.querySelector(`[data-ptask-menu-panel="${id}"]`);
+        const wasOpen = menu.classList.contains('open');
+        closeAllMenus();
+        if (!wasOpen) menu.classList.add('open');
+      });
+    });
+    document.querySelectorAll('[data-ptask-edit]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeAllMenus();
+        openPTaskModal(selectedId, btn.dataset.ptaskEdit);
+      });
+    });
+    document.querySelectorAll('[data-ptask-delete]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeAllMenus();
+        const taskId = btn.dataset.ptaskDelete;
+        const task = proj.tasks.find(t => t.id === taskId);
+        if (confirm(`Supprimer la tâche « ${task.title} » ?`)) {
+          const idx = proj.tasks.findIndex(t => t.id === taskId);
+          proj.tasks.splice(idx, 1);
+          renderDetail();
+        }
+      });
+    });
+  }
+
+  /* MODAL TÂCHE DE PROJET (ajout / édition) */
+  function setPTaskTag(tag) {
+    document.querySelectorAll('#ptask-priority-selector .priority-btn').forEach(b => b.classList.toggle('active', b.dataset.tag === tag));
+  }
+  document.querySelectorAll('#ptask-priority-selector .priority-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      setPTaskTag(btn.dataset.tag);
+      ptaskCtx.tag = btn.dataset.tag;
+    });
+  });
+
+  function openPTaskModal(projId, taskId) {
+    ptaskCtx = { projId, taskId, tag: 'med' };
+    const isEdit = taskId !== null;
+    document.getElementById('ptask-modal-eyebrow').textContent = isEdit ? 'Modifier' : 'Nouveau';
+    document.getElementById('ptask-modal-title').textContent = isEdit ? 'Tâche' : 'Tâche';
+    document.getElementById('btn-save-ptask').textContent = isEdit ? 'Enregistrer' : 'Créer la tâche';
+
+    if (isEdit) {
+      const proj = OrrynData.projects.find(p => p.id === projId);
+      const t = proj.tasks.find(x => x.id === taskId);
+      document.getElementById('ptask-draft-title').value = t.title;
+      document.getElementById('ptask-draft-desc').value = (t.desc === 'Nouvelle tâche.') ? '' : t.desc;
+      document.getElementById('ptask-draft-start').value = t.start || '';
+      document.getElementById('ptask-draft-date').value = t.end || t.dueDate || '';
+      ptaskCtx.tag = t.tag;
+      setPTaskTag(t.tag);
+    } else {
+      document.getElementById('ptask-draft-title').value = '';
+      document.getElementById('ptask-draft-desc').value = '';
+      document.getElementById('ptask-draft-start').value = '';
+      document.getElementById('ptask-draft-date').value = '';
+      setPTaskTag('med');
+    }
+    openModal('ptask-modal');
+    setTimeout(() => document.getElementById('ptask-draft-title').focus(), 100);
+  }
+
+  document.getElementById('btn-save-ptask').addEventListener('click', () => {
+    const title = document.getElementById('ptask-draft-title').value.trim();
+    if (!title) { document.getElementById('ptask-draft-title').focus(); return; }
+    const desc = document.getElementById('ptask-draft-desc').value.trim();
+    const proj = OrrynData.projects.find(p => p.id === ptaskCtx.projId);
+
+    const endDate = document.getElementById('ptask-draft-date').value || null;
+    let startDate = document.getElementById('ptask-draft-start').value || null;
+    // Cohérence : si début après fin, on aligne le début sur la fin
+    if (startDate && endDate && startDate > endDate) startDate = endDate;
+    // Valeurs par défaut pour la timeline
+    const fallbackEnd = endDate || dDayToIso(3);
+    const fallbackStart = startDate || shiftIso(fallbackEnd, -2);
+
+    if (ptaskCtx.taskId !== null) {
+      const t = proj.tasks.find(x => x.id === ptaskCtx.taskId);
+      if (t) {
+        t.title = title; t.desc = desc || 'Nouvelle tâche.'; t.tag = ptaskCtx.tag;
+        t.dueDate = endDate;
+        t.start = fallbackStart;
+        t.end = fallbackEnd;
+      }
+    } else {
+      proj.tasks.push({
+        id: 't' + Date.now(),
+        title,
+        desc: desc || 'Nouvelle tâche.',
+        tag: ptaskCtx.tag,
+        dueDate: endDate,
+        start: fallbackStart,
+        end: fallbackEnd,
+        date: null,
+        link: null,
+        done: false,
+      });
+    }
+    closeModal('ptask-modal');
+    renderDetail();
+  });
+
+  /* ÉDITION DU PROJET (réutilise le modal projet) */
+  function openEditProject(id) {
+    const p = OrrynData.projects.find(x => x.id === id);
+    if (!p) return;
+    editingProjId = id;
+    document.getElementById('proj-modal-eyebrow').textContent = 'Modifier';
+    document.getElementById('proj-modal-title').textContent = 'Projet';
+    document.getElementById('btn-create-project').textContent = 'Enregistrer';
+    document.getElementById('proj-draft-name').value = p.name;
+    document.getElementById('proj-draft-obj').value = (p.objective === 'Objectif à définir.') ? '' : p.objective;
+    draftScope = p.scope;
+    draftStatus = p.status;
+    draftColor = p.color || '#059669';
+    draftIcon = p.icon || 'target';
+    document.querySelectorAll('#proj-scope-selector .priority-btn').forEach(b => b.classList.toggle('active', b.dataset.scope === draftScope));
+    document.querySelectorAll('#proj-status-selector .priority-btn').forEach(b => b.classList.toggle('active', b.dataset.status === draftStatus));
+    buildColorPicker();
+    buildIconPicker();
+    openModal('project-modal');
+    setTimeout(() => document.getElementById('proj-draft-name').focus(), 100);
+  }
+
+  /* SCROLL TABS */
+  document.getElementById('tab-scroll-left').addEventListener('click', () => {
+    document.getElementById('proj-tabs').scrollBy({ left: -280, behavior: 'smooth' });
+  });
+  document.getElementById('tab-scroll-right').addEventListener('click', () => {
+    document.getElementById('proj-tabs').scrollBy({ left: 280, behavior: 'smooth' });
+  });
+
+  /* MODAL */
+  document.getElementById('btn-new-project').addEventListener('click', () => {
+    editingProjId = null;
+    document.getElementById('proj-modal-eyebrow').textContent = 'Nouveau';
+    document.getElementById('proj-modal-title').textContent = 'Projet';
+    document.getElementById('btn-create-project').textContent = 'Créer le projet';
+    document.getElementById('proj-draft-name').value = '';
+    document.getElementById('proj-draft-obj').value = '';
+    draftScope = OrrynData.currentScope;
+    draftStatus = 'active';
+    draftColor = '#059669';
+    draftIcon = 'target';
+    document.querySelectorAll('#proj-scope-selector .priority-btn').forEach(b => b.classList.toggle('active', b.dataset.scope === draftScope));
+    document.querySelectorAll('#proj-status-selector .priority-btn').forEach(b => b.classList.toggle('active', b.dataset.status === 'active'));
+    buildColorPicker();
+    buildIconPicker();
+    openModal('project-modal');
+    setTimeout(() => document.getElementById('proj-draft-name').focus(), 100);
+  });
+
+  document.querySelectorAll('#proj-scope-selector .priority-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#proj-scope-selector .priority-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      draftScope = btn.dataset.scope;
+    });
+  });
+
+  document.querySelectorAll('#proj-status-selector .priority-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#proj-status-selector .priority-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      draftStatus = btn.dataset.status;
+    });
+  });
+
+  document.getElementById('btn-create-project').addEventListener('click', () => {
+    const name = document.getElementById('proj-draft-name').value.trim();
+    if (!name) { document.getElementById('proj-draft-name').focus(); return; }
+    const obj = document.getElementById('proj-draft-obj').value.trim();
+
+    if (editingProjId !== null) {
+      // édition
+      const p = OrrynData.projects.find(x => x.id === editingProjId);
+      if (p) {
+        p.name = name;
+        p.objective = obj || 'Objectif à définir.';
+        p.status = draftStatus;
+        p.color = draftColor;
+        p.icon = draftIcon;
+        // si le scope change, on garde l'area cohérente avec le préfixe
+        if (p.scope !== draftScope) {
+          p.scope = draftScope;
+          const suffix = p.area.includes('·') ? p.area.split('·')[1].trim() : 'Projet';
+          p.area = (draftScope === 'pro' ? 'Pro' : 'Perso') + ' · ' + suffix;
+        }
+      }
+      closeModal('project-modal');
+      // bascule sur l'espace du projet édité au besoin
+      if (OrrynData.currentScope !== draftScope) {
+        OrrynData.currentScope = draftScope;
+        document.querySelectorAll('.toggle-switch button').forEach((b, i) => b.classList.toggle('active', (i === 1) === (draftScope === 'pro')));
+        document.querySelector('.toggle-indicator').classList.toggle('pro', draftScope === 'pro');
+        document.body.classList.toggle('scope-pro', draftScope === 'pro');
+      }
+      selectedId = editingProjId;
+      refreshAll();
+      return;
+    }
+
+    // création
+    const newId = Math.max(0, ...OrrynData.projects.map(p => p.id)) + 1;
+    OrrynData.projects.push({
+      id: newId,
+      name,
+      area: draftScope === 'pro' ? 'Pro · Nouveau' : 'Perso · Nouveau',
+      scope: draftScope,
+      color: draftColor,
+      icon: draftIcon,
+      objective: obj || 'Objectif à définir.',
+      status: draftStatus,
+      progress: 0,
+      deadlineShort: '—',
+      dDay: -30,
+      startedShort: "Auj.",
+      age: "à l'instant",
+      note: 'Aucune note pour le moment.',
+      resources: [],
+      activity: [{ label: 'Projet créé', when: "à l'instant", dotColor: '#10B981' }],
+      tasks: [],
+    });
+    closeModal('project-modal');
+    OrrynData.currentScope = draftScope;
+    document.querySelectorAll('.toggle-switch button').forEach((b, i) => b.classList.toggle('active', (i === 1) === (draftScope === 'pro')));
+    document.querySelector('.toggle-indicator').classList.toggle('pro', draftScope === 'pro');
+    document.body.classList.toggle('scope-pro', draftScope === 'pro');
+    selectedId = newId;
+    refreshAll();
+  });
+
+  /* TOGGLE PERSO/PRO */
+  function applyScope() {
+    const list = scopedProjects();
+    selectedId = list.length ? list[0].id : null;
+    refreshAll();
+  }
+
+  function refreshAll() {
+    renderSummary();
+    renderTabs();
+    renderDetail();
+  }
+
+  /* INIT — après connexion + chargement cloud */
+  initOrrynPage(() => {
+    initModals();
+    initToggle(applyScope);
+
+    // Point 5 : tri auto des tâches de chaque projet par urgence, UNE fois au chargement.
+    // Les tâches faites vont en bas, les non-faites triées par urgence (l'ordre est ensuite
+    // modifiable manuellement par glisser-déposer).
+    OrrynData.projects.forEach(p => {
+      if (!Array.isArray(p.tasks)) return;
+      const todo = sortByUrgency(p.tasks.filter(t => !t.done));
+      const done = p.tasks.filter(t => t.done);
+      p.tasks = todo.concat(done);
+    });
+
+    // Les projets sont tous en Pro pour l'instant : on ouvre la page directement en mode Pro.
+    OrrynData.currentScope = 'pro';
+    document.querySelectorAll('.toggle-switch button').forEach((b, i) => b.classList.toggle('active', i === 1));
+    document.querySelector('.toggle-indicator').classList.add('pro');
+    document.body.classList.add('scope-pro');
+
+    // Arrivée depuis l'accueil avec ?project=X&task=Y : ouvrir le bon projet + surligner la tâche
+    const params = new URLSearchParams(window.location.search);
+    const targetProj = params.get('project');
+    const targetTask = params.get('task');
+
+    if (targetProj) {
+      const proj = OrrynData.projects.find(p => String(p.id) === String(targetProj));
+      if (proj) {
+        // basculer sur l'espace du projet ciblé
+        OrrynData.currentScope = proj.scope;
+        document.querySelectorAll('.toggle-switch button').forEach((b, i) => b.classList.toggle('active', (i === 1) === (proj.scope === 'pro')));
+        document.querySelector('.toggle-indicator').classList.toggle('pro', proj.scope === 'pro');
+        document.body.classList.toggle('scope-pro', proj.scope === 'pro');
+        selectedId = proj.id;
+        renderSummary();
+        renderTabs();
+        renderDetail();
+        // surligner la tâche ciblée
+        if (targetTask) {
+          setTimeout(() => {
+            const btn = document.querySelector(`.proj-task-check[data-task="${CSS.escape(targetTask)}"]`);
+            const row = btn ? btn.closest('.proj-task-row') : null;
+            if (row) {
+              row.classList.add('orryn-highlight');
+              row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          }, 200);
+        }
+        // nettoyer l'URL pour ne pas re-surligner au refresh
+        window.history.replaceState({}, '', 'projects.html');
+        return;
+      }
+    }
+
+    applyScope(); // sélectionne le premier projet de l'espace courant
+  });
+</script>
+
+</body>
+</html>

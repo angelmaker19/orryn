@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orryn — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-wrapper">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">O</div>
+
+    <a class="sidebar-nav-btn active" data-page="dashboard" href="index.html" title="Dashboard">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>
+    </a>
+    <a class="sidebar-nav-btn" data-page="tasks" href="pages/tasks.html" title="Tâches">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+    </a>
+    <a class="sidebar-nav-btn" data-page="mindset" href="pages/mindset.html" title="Mindset">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2a4.5 4.5 0 0 0-4.5 4.5c0 .76.18 1.47.5 2.1A4 4 0 0 0 4 12a4 4 0 0 0 1.5 3.1c-.32.6-.5 1.3-.5 2A3.9 3.9 0 0 0 9 21a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3z"/><path d="M15 2a4.5 4.5 0 0 1 4.5 4.5c0 .76-.18 1.47-.5 2.1A4 4 0 0 1 20 12a4 4 0 0 1-1.5 3.1c.32.6.5 1.3.5 2A3.9 3.9 0 0 1 15 21a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3z"/></svg>
+    </a>
+    <a class="sidebar-nav-btn" data-page="routine" href="pages/routine.html" title="Routine">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.2-8.55"/><path d="M21 3v6h-6"/><path d="M12 7v5l3 2"/></svg>
+    </a>
+    <a class="sidebar-nav-btn" data-page="projects" href="pages/projects.html" title="Projets">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+    </a>
+
+    <div class="sidebar-spacer"></div>
+
+    <a class="sidebar-nav-btn settings-btn" title="Paramètres">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </a>
+    <div class="sidebar-avatar">SM</div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- HEADER -->
+    <header class="page-header">
+      <div class="page-header-left">
+        <span class="page-header-eyebrow" id="today-label"></span>
+        <h1>Bonjour Simon.</h1>
+        <p class="page-header-tagline" id="header-tagline">Trois tâches importantes sur ta route aujourd'hui. Pas plus, pas moins.</p>
+      </div>
+
+      <div class="page-header-right">
+        <div class="toggle-switch">
+          <div class="toggle-indicator"></div>
+          <button class="active">Perso</button>
+          <button>Pro</button>
+        </div>
+        <button class="notif-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+          <span class="notif-dot"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- MANTRA — phrase à garder en tête, éditable, toujours en haut -->
+    <button class="mantra-banner" id="mantra-banner" title="Cliquer pour modifier">
+      <span class="mantra-glow"></span>
+      <svg class="mantra-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0-6 6c0 2 1 3.5 2 4.5.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5 1-1 2-2.5 2-4.5a6 6 0 0 0-6-6z"/><path d="M9 21h6"/><path d="M10 18h4"/></svg>
+      <span class="mantra-text" id="mantra-text"></span>
+      <svg class="mantra-edit" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+    </button>
+
+    <!-- SUMMARY BAR -->
+    <section class="summary-bar">
+      <div class="summary-metric">
+        <span class="summary-metric-label">Tâches du jour</span>
+        <div class="summary-metric-value">
+          <span class="big" id="tasks-done">0</span>
+          <span class="sub">/ <span id="tasks-total">5</span></span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-bar-fill" id="tasks-bar" style="width:0%"></div>
+        </div>
+      </div>
+
+      <div class="summary-metric">
+        <span class="summary-metric-label">Routine</span>
+        <div class="summary-metric-value">
+          <span class="big routine-pct">0%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-bar-fill" id="routine-bar" style="width:0%"></div>
+        </div>
+      </div>
+
+      <div class="summary-metric">
+        <span class="summary-metric-label">Série</span>
+        <div class="summary-metric-value">
+          <span class="big" id="streak-count">13</span>
+          <span class="sub">jours</span>
+        </div>
+        <div class="streak-dots" id="streak-dots"></div>
+      </div>
+    </section>
+
+    <!-- FOCUS DU JOUR -->
+    <section>
+      <div class="section-header">
+        <div>
+          <span class="section-eyebrow">Focus</span>
+          <h2 class="section-title">Priorités du jour</h2>
+        </div>
+        <a href="pages/tasks.html" class="section-link">
+          Voir toutes les tâches
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </div>
+
+      <div class="card" style="padding:8px;" id="focus-tasks-container">
+        <!-- Rempli par JS -->
+      </div>
+    </section>
+
+    <!-- ÉCHÉANCES PROCHES (pro uniquement) — tâches des projets triées par date -->
+    <section id="section-deadlines-block" style="display:none;">
+      <div class="section-header">
+        <div>
+          <span class="section-eyebrow">À surveiller</span>
+          <h2 class="section-title">Échéances proches</h2>
+        </div>
+        <a href="pages/projects.html" class="section-link">
+          Tous les projets
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </div>
+      <div class="card" style="padding:8px;" id="deadlines-container">
+        <!-- Rempli par JS -->
+      </div>
+    </section>
+
+    <!-- ROUTINE (perso uniquement) -->
+    <section id="section-perso-block">
+
+      <div class="routine-card">
+        <div class="routine-header">
+          <div>
+            <span class="section-eyebrow">Routine du jour</span>
+            <h2 class="routine-title"><span class="routine-done">0</span> sur <span class="routine-total">6</span></h2>
+          </div>
+          <div class="routine-pct" style="font-size:24px; font-weight:600; color:#059669; letter-spacing:-0.025em; line-height:1; font-variant-numeric:tabular-nums;">0%</div>
+        </div>
+        <div class="habit-list" id="habit-list">
+          <!-- Rempli par JS -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PROJETS (pro uniquement) -->
+    <section id="section-projets-block">
+      <div class="section-header">
+        <div>
+          <span class="section-eyebrow">En cours</span>
+          <h2 class="section-title">Mes projets</h2>
+        </div>
+        <a href="pages/projects.html" class="section-link">
+          Tout voir
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </div>
+
+      <div class="card projects-table" id="projects-container">
+        <!-- Rempli par JS -->
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/app.js"></script>
+<script src="js/auth.js"></script>
+<script>
+  /* ===== INIT DASHBOARD ===== */
+
+  function renderFocusTasks() {
+    const container = document.getElementById('focus-tasks-container');
+    // On n'affiche QUE les tâches à faire (pas les terminées, elles polluent le focus)
+    const scoped = OrrynData.tasks.filter(t => t.scope === OrrynData.currentScope && !t.done);
+    // Tri par urgence : plus l'échéance est proche, plus la tâche remonte
+    const sorted = sortByUrgency(scoped);
+    const focusTasks = sorted.slice(0, 3);
+    container.innerHTML = '';
+
+    if (focusTasks.length === 0) {
+      container.innerHTML = '<div style="padding:32px 24px; text-align:center; color:var(--ink-2); font-size:14px;">Rien à faire pour le moment. Tout est sous contrôle.</div>';
+      return;
+    }
+
+    focusTasks.forEach((task, i) => {
+      const isLast = i === focusTasks.length - 1;
+      const urgent = isTaskUrgent(task);
+      const row = document.createElement('div');
+      row.className = ('task-row orryn-stagger ' + urgentRowClass(task)).trim();
+      row.style.animationDelay = (i * 55) + 'ms';
+      if (isLast && !urgent) row.style.borderBottom = 'none';
+
+      const dateHtml = urgent
+        ? urgentBadgeHtml(task)
+        : `<span class="task-date"><span class="task-dot"></span>${dateLabelFor(task.dDay)}</span>`;
+
+      row.innerHTML = `
+        <button class="task-check-btn task-check ${task.done ? 'done' : ''}" data-task-id="${task.id}" style="padding:0;">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" style="display:${task.done ? '' : 'none'}"><polyline points="20 6 9 17 4 12"/></svg>
+        </button>
+        <div class="task-body">
+          <span class="task-title ${task.done ? 'done' : ''}">${task.title}</span>
+          <span class="task-desc ${task.done ? 'done' : ''}">${task.description}</span>
+        </div>
+        ${dateHtml}
+      `;
+      container.appendChild(row);
+    });
+
+    bindTaskToggles(updateDashTaskStats);
+  }
+
+  function renderProjects() {
+    const container = document.getElementById('projects-container');
+    container.innerHTML = '';
+
+    OrrynData.projects.forEach((p, i, arr) => {
+      const s = OrrynData.statusMap[p.status];
+      const isLast = i === arr.length - 1;
+      const ddColor = dDayColor(p.dDay, p.status);
+      const progressColor = p.status === 'late' ? '#EF4444' : p.status === 'paused' ? '#9CA3AF' : '#059669';
+
+      const row = document.createElement('a');
+      row.className = 'project-row orryn-stagger';
+      row.style.animationDelay = (i * 55) + 'ms';
+      row.href = 'pages/projects.html?project=' + p.id;
+      if (isLast) row.style.borderBottom = 'none';
+
+      row.innerHTML = `
+        <div class="project-name-col">
+          <div class="project-name-row">
+            <span class="project-status-dot" style="background:${s.dot};"></span>
+            <span class="project-name">${p.name}</span>
+          </div>
+          <p class="project-objective">${p.objective}</p>
+        </div>
+        <div class="project-dday-col">
+          <span class="col-eyebrow">Échéance</span>
+          <span class="project-dday" style="color:${ddColor};">${formatDDay(p.dDay)}</span>
+        </div>
+        <div class="project-progress-col">
+          <div class="project-progress-header">
+            <span class="col-eyebrow">Progression</span>
+            <span class="project-progress-pct">${p.progress}%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar-fill" style="width:${p.progress}%; background:${progressColor};"></div>
+          </div>
+        </div>
+        <div style="display:flex; justify-content:flex-end;">
+          <span class="project-badge" style="background:${s.bg}; color:${s.color};">${s.label}</span>
+        </div>
+        <svg class="project-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      `;
+      container.appendChild(row);
+    });
+  }
+
+  function renderStreakDots() {
+    const container = document.getElementById('streak-dots');
+    const streak = 13;
+    const filledThisWeek = Math.min(streak, 7);
+    for (let i = 0; i < 7; i++) {
+      const dot = document.createElement('span');
+      dot.className = 'streak-dot' + (i < filledThisWeek ? '' : ' empty');
+      container.appendChild(dot);
+    }
+  }
+
+
+  function updateDashTaskStats() {
+    const scoped = OrrynData.tasks.filter(t => t.scope === OrrynData.currentScope);
+    const done = scoped.filter(t => t.done).length;
+    const total = scoped.length;
+    const pct = total ? Math.round(done / total * 100) : 0;
+    document.getElementById('tasks-done').textContent = done;
+    document.getElementById('tasks-total').textContent = total;
+    document.getElementById('tasks-bar').style.width = pct + '%';
+  }
+
+  /* ÉCHÉANCES PROCHES : agrège les tâches non terminées de tous les projets, triées par date */
+  function renderDeadlines() {
+    const container = document.getElementById('deadlines-container');
+    const items = [];
+    OrrynData.projects.forEach(p => {
+      (p.tasks || []).forEach(t => {
+        if (!t.done) items.push({ task: t, project: p });
+      });
+    });
+    // Tri par urgence, les tâches de projets en pause passent en dernier
+    items.sort((a, b) => {
+      const sa = urgencyScore(a.task, { paused: a.project.status === 'paused' });
+      const sb = urgencyScore(b.task, { paused: b.project.status === 'paused' });
+      return sa - sb;
+    });
+    const top = items.slice(0, 5);
+    container.innerHTML = '';
+
+    if (top.length === 0) {
+      container.innerHTML = '<div style="padding:28px 20px; text-align:center; color:#9CA3AF; font-size:14px;">Aucune tâche de projet en cours. Tout est sous contrôle.</div>';
+      return;
+    }
+
+    top.forEach((it, i) => {
+      const p = it.project, t = it.task;
+      const color = p.color || '#059669';
+      const b = dueBadge(t.dueDate);
+      const urgent = isTaskUrgent(t);
+      const a = document.createElement('a');
+      a.className = ('deadline-row orryn-stagger ' + urgentRowClass(t)).trim();
+      a.style.animationDelay = (i * 55) + 'ms';
+      a.href = `pages/projects.html?project=${p.id}&task=${encodeURIComponent(t.id)}`;
+      const badgeHtml = urgent
+        ? urgentBadgeHtml(t)
+        : `<span class="deadline-badge" style="color:${b.color};"><span class="bdot" style="background:${b.dotColor};"></span>${b.label}</span>`;
+      a.innerHTML = `
+        <span class="deadline-proj-icon" style="background:${color}1A; color:${color};">${orrynIconSvg(p.icon || 'target', 18)}</span>
+        <div class="deadline-main">
+          <span class="deadline-title">${t.title}</span>
+          <span class="deadline-sub"><span class="pdot" style="background:${color};"></span>${p.name}</span>
+        </div>
+        ${badgeHtml}
+        <svg class="deadline-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      `;
+      container.appendChild(a);
+    });
+  }
+
+  function applyScope(scope) {
+    const persoBlock = document.getElementById('section-perso-block');
+    const projetsBlock = document.getElementById('section-projets-block');
+    const deadlinesBlock = document.getElementById('section-deadlines-block');
+    persoBlock.style.display   = scope === 'perso' ? 'block' : 'none';
+    projetsBlock.style.display = scope === 'pro'   ? 'block' : 'none';
+    deadlinesBlock.style.display = scope === 'pro' ? 'block' : 'none';
+    renderFocusTasks();
+    updateDashTaskStats();
+    if (scope === 'pro') renderDeadlines();
+  }
+
+  /* MOTION : anime les compteurs clés une seule fois, au chargement */
+  function animateDashboardCounters() {
+    // Tâches faites (mode courant)
+    const scoped = OrrynData.tasks.filter(t => t.scope === OrrynData.currentScope);
+    const tasksDone = scoped.filter(t => t.done).length;
+    animateCount(document.getElementById('tasks-done'), tasksDone);
+    // % routine
+    const total = OrrynData.habits.length;
+    const done = OrrynData.habits.filter(h => h.done).length;
+    const pct = total ? Math.round(done / total * 100) : 0;
+    document.querySelectorAll('.routine-pct').forEach(el => animateCount(el, pct, { suffix: '%' }));
+    // Série
+    animateCount(document.getElementById('streak-count'), 13);
+  }
+
+  /* MANTRA — phrase en haut, cliquer pour la modifier */
+  function renderMantra() {
+    const el = document.getElementById('mantra-text');
+    if (el) el.textContent = OrrynData.mantra || "Ajoute ta phrase du jour.";
+  }
+  function initMantra() {
+    renderMantra();
+    document.getElementById('mantra-banner').addEventListener('click', () => {
+      openMantraModal(OrrynData.mantra || '', (val) => {
+        OrrynData.mantra = val.trim() || OrrynData.mantra;
+        renderMantra();
+        persistOrryn();
+      });
+    });
+  }
+
+  /* INIT — après connexion + chargement des données depuis le cloud */
+  initOrrynPage(() => {
+    document.getElementById('today-label').textContent = getTodayLabel();
+    renderHabits();
+    renderProjects();
+    renderStreakDots();
+    initMantra();
+    initToggle(applyScope);
+    updateRoutineStats();
+    applyScope('perso');
+    animateDashboardCounters();
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orryn — Mindset</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="app-wrapper">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">O</div>
+
+    <a class="sidebar-nav-btn" data-page="dashboard" href="../index.html" title="Dashboard">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>
+    </a>
+    <a class="sidebar-nav-btn" data-page="tasks" href="tasks.html" title="Tâches">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+    </a>
+    <a class="sidebar-nav-btn active" data-page="mindset" href="mindset.html" title="Mindset">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2a4.5 4.5 0 0 0-4.5 4.5c0 .76.18 1.47.5 2.1A4 4 0 0 0 4 12a4 4 0 0 0 1.5 3.1c-.32.6-.5 1.3-.5 2A3.9 3.9 0 0 0 9 21a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3z"/><path d="M15 2a4.5 4.5 0 0 1 4.5 4.5c0 .76-.18 1.47-.5 2.1A4 4 0 0 1 20 12a4 4 0 0 1-1.5 3.1c.32.6.5 1.3.5 2A3.9 3.9 0 0 1 15 21a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3z"/></svg>
+    </a>
+    <a class="sidebar-nav-btn" data-page="routine" href="routine.html" title="Routine">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.2-8.55"/><path d="M21 3v6h-6"/><path d="M12 7v5l3 2"/></svg>
+    </a>
+    <a class="sidebar-nav-btn" data-page="projects" href="projects.html" title="Projets">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+    </a>
+
+    <div class="sidebar-spacer"></div>
+
+    <a class="sidebar-nav-btn settings-btn" title="Paramètres">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </a>
+    <div class="sidebar-avatar">SM</div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content" style="gap:40px;">
+
+    <!-- HEADER -->
+    <header class="page-header-left">
+      <span class="page-header-eyebrow">Mindset · <span id="tab-label">Mon Why</span></span>
+      <h1 style="font-family:'Fraunces', Georgia, serif; font-size:44px; font-weight:500; letter-spacing:-0.025em; color:var(--ink); line-height:1.05; margin:8px 0 0;">Mindset.</h1>
+      <p class="page-header-tagline">Reviens ici quand tu as besoin de te recentrer. Une pratique, pas une performance.</p>
+    </header>
+
+    <!-- TABS -->
+    <div class="mindset-tabs">
+      <button class="mindset-tab active" data-tab="why">Mon Why</button>
+      <button class="mindset-tab" data-tab="affirm">Affirmations</button>
+      <button class="mindset-tab" data-tab="grat">Gratitude</button>
+    </div>
+
+    <!-- ===== PANEL WHY ===== -->
+    <section class="mindset-panel active" data-panel="why">
+      <div class="section-header">
+        <div>
+          <span class="section-eyebrow">Ma boussole</span>
+          <h2 class="section-title">Mon Why</h2>
+        </div>
+        <span style="font-size:12px; color:#9CA3AF; font-weight:500;">Mis à jour il y a 6 jours</span>
+      </div>
+
+      <div class="why-card why-card-a4">
+        <!-- Barre d'outils texte riche (point 8) -->
+        <div class="why-toolbar">
+          <button type="button" data-why-cmd="bold" title="Gras"><b>G</b></button>
+          <button type="button" data-why-cmd="italic" title="Italique"><i>I</i></button>
+          <button type="button" data-why-cmd="hilite" title="Surligner"><span class="rte-hl">S</span></button>
+        </div>
+
+        <div class="why-editor rich-text" id="why-text" contenteditable="true" data-placeholder="Écris-le comme tu le penses. Pas besoin que ce soit parfait, juste vrai. Reviens le relire quand le sens s'effrite."></div>
+
+        <div class="why-footer">
+          <div class="why-meta">
+            <span class="saved"><span class="dot"></span>Enregistré automatiquement</span>
+            <span class="sep">·</span>
+            <span class="count" id="why-count">0 mots</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PANEL AFFIRMATIONS ===== -->
+    <section class="mindset-panel" data-panel="affirm">
+      <div style="display:flex; flex-direction:column; gap:40px;">
+
+        <!-- Featured -->
+        <div>
+          <div class="section-header">
+            <div>
+              <span class="section-eyebrow">Affirmation du jour</span>
+              <h2 class="section-title" id="affirm-featured-date"></h2>
+            </div>
+          </div>
+
+          <div class="affirm-featured">
+            <div class="affirm-featured-circle"></div>
+            <blockquote class="affirm-featured-quote" id="affirm-featured-quote"></blockquote>
+            <div class="affirm-featured-footer">
+              <span style="font-size:12.5px; color:#5B6B68; font-weight:500;">Tirée au sort ce matin</span>
+              <div style="display:flex; gap:6px;">
+                <button class="affirm-action">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16l7-3z"/></svg>
+                  Mettre en favori
+                </button>
+                <button class="affirm-action" id="affirm-shuffle">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+                  En tirer une autre
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Collection -->
+        <div>
+          <div class="section-header">
+            <div>
+              <span class="section-eyebrow">Collection</span>
+              <h2 class="section-title"><span id="affirm-count">0</span> affirmations</h2>
+            </div>
+            <button class="btn-primary" id="btn-add-affirm" style="padding:10px 16px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+              Ajouter
+            </button>
+          </div>
+
+          <div class="card" id="affirm-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PANEL GRATITUDE ===== -->
+    <section class="mindset-panel" data-panel="grat">
+      <div style="display:flex; flex-direction:column; gap:40px;">
+
+        <!-- Today -->
+        <div>
+          <div class="section-header">
+            <div>
+              <span class="section-eyebrow" id="grat-today-label">Aujourd'hui</span>
+              <h2 class="section-title">Aujourd'hui, je suis reconnaissant pour…</h2>
+            </div>
+            <div class="streak-pill"><span class="dot"></span>Série de 12 jours</div>
+          </div>
+
+          <div class="gratitude-card">
+            <div class="gratitude-slot">
+              <span class="gratitude-num">1</span>
+              <textarea class="gratitude-input" placeholder="Une chose toute simple. Le soleil sur la table du petit déj, peut-être."></textarea>
+            </div>
+            <div class="gratitude-slot">
+              <span class="gratitude-num">2</span>
+              <textarea class="gratitude-input" placeholder="Une personne, un geste, un moment partagé."></textarea>
+            </div>
+            <div class="gratitude-slot">
+              <span class="gratitude-num">3</span>
+              <textarea class="gratitude-input" placeholder="Quelque chose en toi, une qualité, une décision, un effort."></textarea>
+            </div>
+
+            <div class="gratitude-actions">
+              <button class="btn-ghost" id="btn-grat-save">Enregistrer</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- History -->
+        <div>
+          <div class="section-header">
+            <div>
+              <span class="section-eyebrow">Jours précédents</span>
+              <h2 class="section-title">Historique</h2>
+            </div>
+            <a href="#" class="section-link">
+              Tout l'historique
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+          </div>
+
+          <div class="card" id="grat-history"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/supabase-config.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/auth.js"></script>
+<script>
+  /* AFFIRMATIONS — source unique partagée (OrrynData), max 10, ajoutées par Simon */
+  const MAX_AFFIRMATIONS = 10;
+  // Ces variables pointent vers OrrynData ; réassignées dans l'INIT après le chargement cloud.
+  let mindsetAffirmations = OrrynData.affirmations;
+  let gratitudeHistory = OrrynData.gratitudeHistory || [];
+
+  // Prépare les données par défaut + relie les variables aux tableaux d'OrrynData
+  function bindMindsetData() {
+    if (!OrrynData.gratitudeHistory) {
+      OrrynData.gratitudeHistory = [
+        { weekday: 'Dim.', day: '29', month: 'juin', lines: ["Le rire de ma fille quand elle a vu le héron sur le canal.", "Mon père qui m'a appelé spontanément, juste pour discuter.", "D'avoir tenu mon engagement de courir, même quand l'envie n'y était pas."] },
+        { weekday: 'Sam.', day: '28', month: 'juin', lines: ["Le marché des Capucins, l'odeur du pain chaud et du café fort.", "Camille qui m'a écrit « je pense à toi » sans raison particulière.", "Ma capacité à reconnaître que j'étais fatigué et à dire non à la soirée."] },
+        { weekday: 'Ven.', day: '27', month: 'juin', lines: ["L'équipe qui a tenu jusqu'au bout du sprint, sans une plainte.", "Le silence du bureau à 19h, après tout le monde parti."] },
+      ];
+    }
+    mindsetAffirmations = OrrynData.affirmations;
+    gratitudeHistory = OrrynData.gratitudeHistory;
+  }
+
+  const tabLabels = { why: 'Mon Why', affirm: 'Affirmations', grat: 'Gratitude' };
+
+  /* ONGLETS */
+  document.querySelectorAll('.mindset-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+      document.querySelectorAll('.mindset-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      document.querySelectorAll('.mindset-panel').forEach(p => {
+        p.classList.toggle('active', p.dataset.panel === target);
+      });
+      document.getElementById('tab-label').textContent = tabLabels[target];
+    });
+  });
+
+  /* WHY — éditeur riche (point 8) + compteur de mots + sauvegarde (point 7 : page A4) */
+  const whyEditor = document.getElementById('why-text');
+  const DEFAULT_WHY = "Je veux construire une vie où je peux choisir mon temps. Où chaque journée a du sens, même les lentes. Où ce que je crée aide quelqu'un, quelque part, à respirer mieux.";
+  // Charge le "Why" enregistré (appelé dans l'INIT, après le chargement cloud)
+  function loadWhy() {
+    const saved = (typeof OrrynData.whyText === 'string') ? OrrynData.whyText : DEFAULT_WHY;
+    whyEditor.innerHTML = saved;
+    updateWhyCount();
+  }
+  function updateWhyCount() {
+    const text = (whyEditor.innerText || '').trim();
+    const words = text ? text.split(/\s+/).length : 0;
+    document.getElementById('why-count').textContent = words + ' mots';
+  }
+  let whySaveTimer = null;
+  whyEditor.addEventListener('input', () => {
+    updateWhyCount();
+    OrrynData.whyText = whyEditor.innerHTML;
+    // Sauvegarde différée (évite d'écrire à chaque frappe)
+    clearTimeout(whySaveTimer);
+    whySaveTimer = setTimeout(() => persistOrryn(), 900);
+  });
+  // Barre d'outils texte riche
+  document.querySelectorAll('[data-why-cmd]').forEach(btn => {
+    btn.addEventListener('mousedown', (e) => {
+      e.preventDefault(); // garde la sélection
+      whyEditor.focus();
+      applyRteCommand(btn.dataset.whyCmd);
+      OrrynData.whyText = whyEditor.innerHTML;
+      clearTimeout(whySaveTimer);
+      whySaveTimer = setTimeout(() => persistOrryn(), 900);
+    });
+  });
+
+  /* AFFIRMATIONS */
+  function renderAffirmCollection() {
+    const list = document.getElementById('affirm-list');
+    list.innerHTML = '';
+    document.getElementById('affirm-count').textContent = mindsetAffirmations.length;
+
+    const addBtn = document.getElementById('btn-add-affirm');
+    if (mindsetAffirmations.length >= MAX_AFFIRMATIONS) {
+      addBtn.disabled = true;
+      addBtn.style.opacity = '0.4';
+      addBtn.style.cursor = 'not-allowed';
+      addBtn.title = 'Maximum 10 affirmations';
+    } else {
+      addBtn.disabled = false;
+      addBtn.style.opacity = '1';
+      addBtn.style.cursor = 'pointer';
+      addBtn.title = '';
+    }
+
+    if (mindsetAffirmations.length === 0) {
+      list.innerHTML = `
+        <div class="tasks-empty">
+          <h3>Aucune affirmation pour l'instant.</h3>
+          <p>Ajoute les phrases qui te recentrent. Maximum 10, choisies par toi.</p>
+        </div>`;
+      return;
+    }
+
+    mindsetAffirmations.forEach((a, i) => {
+      const row = document.createElement('div');
+      row.className = 'affirm-row';
+      row.draggable = true;
+      row.dataset.idx = i;
+      if (i === mindsetAffirmations.length - 1) row.style.borderBottom = 'none';
+      row.innerHTML = `
+        <span class="drag-handle" title="Glisser pour réordonner">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="9" cy="6" r="1.6"/><circle cx="15" cy="6" r="1.6"/><circle cx="9" cy="12" r="1.6"/><circle cx="15" cy="12" r="1.6"/><circle cx="9" cy="18" r="1.6"/><circle cx="15" cy="18" r="1.6"/></svg>
+        </span>
+        <p class="affirm-quote-text rich-text">"${a.quote}"</p>
+        <span class="affirm-row-date">${a.date}</span>
+        <div class="affirm-row-actions">
+          <button class="icon-btn fav-btn ${a.fav ? 'fav' : ''}" data-fav="${i}" title="Favori">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="${a.fav ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </button>
+          <button class="icon-btn" data-affirm-edit="${i}" title="Modifier">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </button>
+          <button class="icon-btn danger" data-affirm-del="${i}" title="Supprimer">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+      `;
+      list.appendChild(row);
+    });
+
+    list.querySelectorAll('.fav-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const idx = parseInt(btn.dataset.fav);
+        mindsetAffirmations[idx].fav = !mindsetAffirmations[idx].fav;
+        persistOrryn();
+        renderAffirmCollection();
+      });
+    });
+    list.querySelectorAll('[data-affirm-edit]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const idx = parseInt(btn.dataset.affirmEdit);
+        openOrrynInput({
+          title: 'Modifier l\'affirmation', rich: true, value: mindsetAffirmations[idx].quote,
+          placeholder: 'Écris ton affirmation…', okLabel: 'Enregistrer',
+        }, (html) => {
+          const clean = (html || '').trim();
+          if (!clean) return;
+          mindsetAffirmations[idx].quote = clean;
+          persistOrryn();
+          renderAffirmCollection();
+          renderFeatured();
+        });
+      });
+    });
+    list.querySelectorAll('[data-affirm-del]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const idx = parseInt(btn.dataset.affirmDel);
+        mindsetAffirmations.splice(idx, 1);
+        persistOrryn();
+        renderAffirmCollection();
+        renderFeatured();
+      });
+    });
+
+    // Point 6 : glisser-déposer pour réordonner les affirmations
+    enableListReorder(list, '.affirm-row', (from, to) => {
+      const [moved] = mindsetAffirmations.splice(from, 1);
+      mindsetAffirmations.splice(to, 0, moved);
+      persistOrryn();
+      renderAffirmCollection();
+    });
+  }
+
+  /* AFFIRMATION DU JOUR — tirée parmi celles de Simon */
+  let featuredIdx = 0;
+  function renderFeatured() {
+    const quoteEl = document.getElementById('affirm-featured-quote');
+    const shuffleBtn = document.getElementById('affirm-shuffle');
+    quoteEl.classList.add('rich-text');
+    if (mindsetAffirmations.length === 0) {
+      quoteEl.style.fontStyle = 'italic';
+      quoteEl.style.color = '#9CA3AF';
+      quoteEl.textContent = 'Ajoute ta première affirmation pour la voir apparaître ici chaque matin.';
+      shuffleBtn.style.display = 'none';
+      return;
+    }
+    quoteEl.style.fontStyle = 'normal';
+    quoteEl.style.color = '#0F1A14';
+    shuffleBtn.style.display = '';
+    featuredIdx = featuredIdx % mindsetAffirmations.length;
+    quoteEl.innerHTML = '"' + mindsetAffirmations[featuredIdx].quote + '"';
+  }
+  document.getElementById('affirm-shuffle').addEventListener('click', () => {
+    if (mindsetAffirmations.length === 0) return;
+    featuredIdx = (featuredIdx + 1) % mindsetAffirmations.length;
+    renderFeatured();
+  });
+
+  document.getElementById('btn-add-affirm').addEventListener('click', () => {
+    if (mindsetAffirmations.length >= MAX_AFFIRMATIONS) return;
+    openOrrynInput({
+      title: 'Nouvelle affirmation',
+      sub: 'Une phrase à la première personne, au présent. Tu peux la mettre en forme.',
+      rich: true, placeholder: 'Ex : Je construis, jour après jour, la vie que je veux.',
+      okLabel: 'Ajouter',
+    }, (html) => {
+      const clean = (html || '').trim();
+      if (!clean) return;
+      const now = new Date();
+      const months = ['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+      mindsetAffirmations.unshift({ quote: clean, date: now.getDate() + ' ' + months[now.getMonth()], fav: false });
+      persistOrryn();
+      renderAffirmCollection();
+      renderFeatured();
+    });
+  });
+
+  /* GRATITUDE HISTORY */
+  function renderGratHistory() {
+    const c = document.getElementById('grat-history');
+    c.innerHTML = '';
+    gratitudeHistory.forEach((d, i) => {
+      const row = document.createElement('div');
+      row.className = 'gratitude-history-row';
+      if (i === gratitudeHistory.length - 1) row.style.borderBottom = 'none';
+      const linesHtml = d.lines.map(l => `<p>${l}</p>`).join('');
+      row.innerHTML = `
+        <div class="gratitude-date">
+          <div class="wd">${d.weekday}</div>
+          <div class="d">${d.day}</div>
+          <div class="m">${d.month}</div>
+        </div>
+        <div class="gratitude-lines">${linesHtml}</div>
+      `;
+      c.appendChild(row);
+    });
+  }
+
+  document.getElementById('btn-grat-save').addEventListener('click', () => {
+    const inputs = document.querySelectorAll('.mindset-panel[data-panel="grat"] .gratitude-input');
+    const lines = Array.from(inputs).map(i => i.value.trim()).filter(Boolean);
+    if (lines.length === 0) { alert('Note au moins une gratitude avant d\'enregistrer.'); return; }
+    const now = new Date();
+    const weekdays = ['Dim.','Lun.','Mar.','Mer.','Jeu.','Ven.','Sam.'];
+    const months = ['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+    gratitudeHistory.unshift({
+      weekday: weekdays[now.getDay()],
+      day: String(now.getDate()),
+      month: months[now.getMonth()],
+      lines,
+    });
+    inputs.forEach(i => i.value = '');
+    persistOrryn();
+    renderGratHistory();
+  });
+
+  /* DATES DYNAMIQUES */
+  function setupDates() {
+    const now = new Date();
+    const days = ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
+    const months = ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+    const label = `${days[now.getDay()]} ${now.getDate()} ${months[now.getMonth()]}`;
+    document.getElementById('affirm-featured-date').textContent = label;
+    document.getElementById('grat-today-label').textContent = "Aujourd'hui · " + label;
+  }
+
+  /* INIT — après connexion + chargement cloud */
+  initOrrynPage(() => {
+    bindMindsetData();
+    setupDates();
+    loadWhy();
+    renderFeatured();
+    renderAffirmCollection();
+    renderGratHistory();
+  });
+</script>
+
+</body>
+</html>

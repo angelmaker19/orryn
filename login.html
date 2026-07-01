@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orryn — Connexion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .login-wrap {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .login-card {
+      background: #FFFFFF;
+      border-radius: 24px;
+      padding: 44px 40px 36px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 12px 48px rgba(5, 150, 105, 0.10);
+    }
+    .login-logo {
+      width: 52px; height: 52px; border-radius: 16px;
+      background: linear-gradient(135deg, #059669, #10B981);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-weight: 700; font-size: 22px;
+      box-shadow: 0 8px 20px rgba(5, 150, 105, 0.25);
+      margin-bottom: 24px;
+    }
+    .login-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 30px; font-weight: 500; letter-spacing: -0.02em;
+      color: #0F1A14; margin-bottom: 6px;
+    }
+    .login-sub { font-size: 14px; color: #6B7280; margin-bottom: 28px; line-height: 1.5; }
+    .login-msg {
+      font-size: 13px; padding: 10px 14px; border-radius: 10px;
+      margin-bottom: 16px; display: none; line-height: 1.45;
+    }
+    .login-msg.error { background: #FEF2F2; color: #DC2626; display: block; }
+    .login-msg.success { background: #ECFDF5; color: #047857; display: block; }
+    .login-switch { margin-top: 20px; font-size: 13px; color: #6B7280; text-align: center; }
+    .login-switch button {
+      background: none; border: none; color: #059669; font-weight: 600;
+      font-size: 13px; cursor: pointer; font-family: inherit; padding: 0;
+    }
+    .login-switch button:hover { text-decoration: underline; }
+    .btn-primary.full { width: 100%; justify-content: center; padding: 13px; font-size: 15px; }
+  </style>
+</head>
+<body>
+
+<div class="login-wrap">
+  <div class="login-card">
+    <div class="login-logo">O</div>
+    <h1 class="login-title" id="form-title">Bon retour.</h1>
+    <p class="login-sub" id="form-sub">Connecte-toi pour retrouver ton espace.</p>
+
+    <div class="login-msg" id="msg"></div>
+
+    <div class="form-group">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-input" id="email" placeholder="toi@exemple.com" autocomplete="email">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Mot de passe</label>
+      <input type="password" class="form-input" id="password" placeholder="••••••••" autocomplete="current-password">
+    </div>
+
+    <button class="btn-primary full" id="submit-btn">Se connecter</button>
+
+    <p class="login-switch" id="switch-line">
+      Pas encore de compte ?
+      <button id="switch-btn">Créer un compte</button>
+    </p>
+  </div>
+</div>
+
+<!-- Librairie Supabase (chargée depuis leur CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script>
+  const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+  let mode = 'login'; // 'login' ou 'signup'
+  const msg = document.getElementById('msg');
+  const submitBtn = document.getElementById('submit-btn');
+
+  function showMsg(text, type) {
+    msg.textContent = text;
+    msg.className = 'login-msg ' + type;
+  }
+
+  // Si déjà connecté, on file direct à l'app
+  (async () => {
+    const { data } = await sb.auth.getSession();
+    if (data.session) window.location.href = 'index.html';
+  })();
+
+  document.getElementById('switch-btn').addEventListener('click', () => {
+    mode = (mode === 'login') ? 'signup' : 'login';
+    if (mode === 'signup') {
+      document.getElementById('form-title').textContent = 'Bienvenue.';
+      document.getElementById('form-sub').textContent = 'Crée ton compte pour démarrer.';
+      submitBtn.textContent = 'Créer mon compte';
+      document.getElementById('switch-line').childNodes[0].textContent = 'Déjà un compte ? ';
+      document.getElementById('switch-btn').textContent = 'Se connecter';
+    } else {
+      document.getElementById('form-title').textContent = 'Bon retour.';
+      document.getElementById('form-sub').textContent = 'Connecte-toi pour retrouver ton espace.';
+      submitBtn.textContent = 'Se connecter';
+      document.getElementById('switch-line').childNodes[0].textContent = 'Pas encore de compte ? ';
+      document.getElementById('switch-btn').textContent = 'Créer un compte';
+    }
+    msg.className = 'login-msg';
+  });
+
+  async function handleSubmit() {
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+    if (!email || !password) { showMsg('Entre ton email et ton mot de passe.', 'error'); return; }
+    if (password.length < 6) { showMsg('Le mot de passe doit faire au moins 6 caractères.', 'error'); return; }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = '…';
+
+    try {
+      if (mode === 'signup') {
+        const { error } = await sb.auth.signUp({ email, password });
+        if (error) throw error;
+        // Si la confirmation email est désactivée, on est connecté direct
+        const { data } = await sb.auth.getSession();
+        if (data.session) {
+          window.location.href = 'index.html';
+        } else {
+          showMsg('Compte créé. Vérifie tes emails pour confirmer, puis connecte-toi.', 'success');
+          mode = 'login';
+        }
+      } else {
+        const { error } = await sb.auth.signInWithPassword({ email, password });
+        if (error) throw error;
+        window.location.href = 'index.html';
+      }
+    } catch (e) {
+      const m = (e && e.message) ? e.message : 'Une erreur est survenue.';
+      // Messages plus clairs en français pour les cas fréquents
+      if (m.includes('Invalid login')) showMsg('Email ou mot de passe incorrect.', 'error');
+      else if (m.includes('already registered')) showMsg('Cet email a déjà un compte. Connecte-toi.', 'error');
+      else showMsg(m, 'error');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = (mode === 'signup') ? 'Créer mon compte' : 'Se connecter';
+    }
+  }
+
+  submitBtn.addEventListener('click', handleSubmit);
+  document.getElementById('password').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') handleSubmit();
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orryn — Routine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="app-wrapper">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">O</div>
+
+    <a class="sidebar-nav-btn" data-page="dashboard" href="../index.html" title="Dashboard">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>
+    </a>
+    <a class="sidebar-nav-btn" data-page="tasks" href="tasks.html" title="Tâches">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+    </a>
+    <a class="sidebar-nav-btn" data-page="mindset" href="mindset.html" title="Mindset">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2a4.5 4.5 0 0 0-4.5 4.5c0 .76.18 1.47.5 2.1A4 4 0 0 0 4 12a4 4 0 0 0 1.5 3.1c-.32.6-.5 1.3-.5 2A3.9 3.9 0 0 0 9 21a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3z"/><path d="M15 2a4.5 4.5 0 0 1 4.5 4.5c0 .76-.18 1.47-.5 2.1A4 4 0 0 1 20 12a4 4 0 0 1-1.5 3.1c.32.6.5 1.3.5 2A3.9 3.9 0 0 1 15 21a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3z"/></svg>
+    </a>
+    <a class="sidebar-nav-btn active" data-page="routine" href="routine.html" title="Routine">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.2-8.55"/><path d="M21 3v6h-6"/><path d="M12 7v5l3 2"/></svg>
+    </a>
+    <a class="sidebar-nav-btn" data-page="projects" href="projects.html" title="Projets">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+    </a>
+
+    <div class="sidebar-spacer"></div>
+
+    <a class="sidebar-nav-btn settings-btn" title="Paramètres">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </a>
+    <div class="sidebar-avatar">SM</div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- HEADER -->
+    <header class="page-header" style="align-items:flex-end;">
+      <div class="page-header-left">
+        <span class="page-header-eyebrow" id="today-label"></span>
+        <h1>Ma routine.</h1>
+        <p class="page-header-tagline">13 jours d'affilée. Les petits gestes répétés deviennent ce que tu es.</p>
+      </div>
+      <button class="btn-primary" id="btn-add-habit">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+        Ajouter une habitude
+      </button>
+    </header>
+
+    <!-- STAT ROW -->
+    <section class="summary-bar">
+      <div class="summary-metric">
+        <span class="summary-metric-label">Aujourd'hui</span>
+        <div class="summary-metric-value">
+          <span class="big" id="stat-today-pct">0</span>
+          <span class="sub">%</span>
+        </div>
+        <div class="progress-bar"><div class="progress-bar-fill" id="stat-today-bar" style="width:0%"></div></div>
+      </div>
+      <div class="summary-metric">
+        <span class="summary-metric-label">Semaine</span>
+        <div class="summary-metric-value">
+          <span class="big">78</span>
+          <span class="sub">%</span>
+        </div>
+        <div class="progress-bar"><div class="progress-bar-fill" style="width:78%"></div></div>
+      </div>
+      <div class="summary-metric">
+        <span class="summary-metric-label">Série</span>
+        <div class="summary-metric-value">
+          <span class="big">13</span>
+          <span class="sub">jours</span>
+        </div>
+        <div class="streak-dots" id="streak-dots"></div>
+      </div>
+    </section>
+
+    <!-- TODAY HABITS -->
+    <section>
+      <div class="section-header">
+        <div>
+          <span class="section-eyebrow">Aujourd'hui</span>
+          <h2 class="section-title"><span id="today-done">0</span> sur <span id="today-total">6</span> accomplies</h2>
+        </div>
+        <div class="routine-segments" id="segments">
+          <button class="segment-btn active" data-moment="all">Toutes</button>
+          <button class="segment-btn" data-moment="matin">Matin</button>
+          <button class="segment-btn" data-moment="soir">Soir</button>
+        </div>
+      </div>
+
+      <div class="card" id="habits-track"></div>
+    </section>
+
+    <!-- WEEK -->
+    <section>
+      <div class="section-header">
+        <div>
+          <span class="section-eyebrow" id="week-eyebrow">Cette semaine</span>
+          <h2 class="section-title" id="week-range"></h2>
+        </div>
+        <div style="display:flex; gap:8px; align-items:center;">
+          <button class="nav-arrow-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+          <button class="nav-arrow-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+        </div>
+      </div>
+
+      <div class="tracker-card">
+        <div class="week-header" id="week-header"></div>
+        <div class="week-rows" id="week-rows"></div>
+        <div class="tracker-legend">
+          <div class="legend-item"><span class="legend-swatch" style="background:#059669;"></span><span>Fait</span></div>
+          <div class="legend-item"><span class="legend-swatch" style="background:#FEF2F2;"></span><span>Manqué</span></div>
+          <div class="legend-item"><span class="legend-swatch" style="background:#F0F5F2;"></span><span>Non prévu</span></div>
+          <div class="legend-item"><span class="legend-swatch" style="background:#fff; border:1px dashed #D1D5DB;"></span><span>À venir</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MONTH HEATMAP -->
+    <section>
+      <div class="section-header">
+        <div>
+          <span class="section-eyebrow" id="month-eyebrow"></span>
+          <h2 class="section-title">Vue du mois</h2>
+        </div>
+        <div style="display:flex; gap:8px; align-items:center;">
+          <button class="nav-arrow-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+          <button class="nav-arrow-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+        </div>
+      </div>
+
+      <div class="tracker-card">
+        <div class="month-weekdays">
+          <div>Lun</div><div>Mar</div><div>Mer</div><div>Jeu</div><div>Ven</div><div>Sam</div><div>Dim</div>
+        </div>
+        <div class="month-grid" id="month-grid"></div>
+        <div class="month-footer">
+          <div class="heatmap-scale">
+            <span class="lbl">Moins</span>
+            <div class="swatches">
+              <span style="background:#F0F5F2;"></span>
+              <span style="background:#D1FAE5;"></span>
+              <span style="background:#6EE7B7;"></span>
+              <span style="background:#10B981;"></span>
+              <span style="background:#047857;"></span>
+            </div>
+            <span class="lbl">Plus</span>
+          </div>
+          <div class="month-stats">
+            <div class="month-stat"><div class="label">Jours réussis</div><div class="value" id="month-success">17 / 30</div></div>
+            <div class="month-stat"><div class="label">Plus longue série</div><div class="value">12 jours</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- MODAL HABITUDE -->
+<div class="modal-overlay" id="habit-modal">
+  <div class="modal" style="max-width:480px;">
+    <div class="modal-header">
+      <div>
+        <span class="section-eyebrow" id="habit-modal-eyebrow">Nouveau</span>
+        <h2 class="modal-title" style="font-size:28px;" id="habit-modal-title">Habitude</h2>
+      </div>
+      <button class="modal-close" data-close-modal="habit-modal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Nom</label>
+      <input type="text" class="form-input" id="habit-draft-label" placeholder="Ex. Méditation">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Détail <span style="color:#9CA3AF; font-weight:500; text-transform:none; letter-spacing:0;">— optionnel</span></label>
+      <input type="text" class="form-input" id="habit-draft-detail" placeholder="Ex. 10 minutes · respiration consciente">
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+      <div class="form-group">
+        <label class="form-label">Heure</label>
+        <input type="time" class="form-input" id="habit-draft-time" value="07:00">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Moment</label>
+        <div class="priority-selector" id="habit-moment-selector">
+          <button class="priority-btn normal active" data-moment="matin">Matin</button>
+          <button class="priority-btn normal" data-moment="soir">Soir</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn-ghost" data-close-modal="habit-modal">Annuler</button>
+      <button class="btn-primary" id="btn-save-habit">Créer l'habitude</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/supabase-config.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/auth.js"></script>
+<script>
+  let currentMoment = 'all';
+
+  /* La grille semaine démarre vide : l'historique se construit jour après jour.
+     Aujourd'hui reflète les coches en temps réel, le reste est "non prévu" (passé) ou "à venir" (futur). */
+
+  const monthIntensities = [3,4,2,4,3,2,1, 4,3,4,4,3,2,2, 3,4,3,1,0,2,3, 4,3,4,2,3,4,3, 2,3];
+  const intensityPalette = [
+    { bg:'#F0F5F2', color:'#9CA3AF' },
+    { bg:'#D1FAE5', color:'#374151' },
+    { bg:'#6EE7B7', color:'#064E3B' },
+    { bg:'#10B981', color:'#fff' },
+    { bg:'#047857', color:'#fff' },
+  ];
+
+  const monthsFull = ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+  const monthsShort = ['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+
+  /* HABITUDES DU JOUR */
+  function visibleHabits() {
+    if (currentMoment === 'all') return OrrynData.habits;
+    return OrrynData.habits.filter(h => h.moment === currentMoment);
+  }
+
+  function renderTrackHabits() {
+    const c = document.getElementById('habits-track');
+    const list = visibleHabits();
+    c.innerHTML = '';
+
+    if (list.length === 0) {
+      c.innerHTML = '<div class="tasks-empty"><h3>Aucune habitude ici.</h3><p>Rien de prévu sur ce moment de la journée.</p></div>';
+      return;
+    }
+
+    list.forEach((h, i) => {
+      const row = document.createElement('div');
+      row.className = 'habit-track-row';
+      if (i === list.length - 1) row.style.borderBottom = 'none';
+      row.dataset.habitId = h.id;
+      row.innerHTML = `
+        <span class="habit-track-check ${h.done ? 'done' : ''}" data-toggle="${h.id}" style="cursor:pointer;">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" style="display:${h.done ? '' : 'none'}"><polyline points="20 6 9 17 4 12"/></svg>
+        </span>
+        <div class="habit-track-info" data-toggle="${h.id}" style="cursor:pointer;">
+          <h3 class="habit-track-label ${h.done ? 'done' : ''}">${h.label}</h3>
+          <p class="habit-track-detail">${h.detail}</p>
+        </div>
+        <span class="habit-track-streak"><span class="dot"></span>${h.streak} jours</span>
+        <div class="row-menu-wrap" style="display:flex; align-items:center; justify-content:flex-end; gap:10px;">
+          <span class="habit-track-time">${h.time}</span>
+          <button class="task-menu-btn" data-menu-toggle="${h.id}">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
+          </button>
+          <div class="row-menu" data-menu="${h.id}">
+            <button data-edit="${h.id}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              Modifier
+            </button>
+            <button class="danger" data-delete="${h.id}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg>
+              Supprimer
+            </button>
+          </div>
+        </div>
+      `;
+      c.appendChild(row);
+    });
+
+    bindHabitInteractions();
+  }
+
+  /* Cocher + menus */
+  function closeAllMenus() {
+    document.querySelectorAll('.row-menu.open').forEach(m => m.classList.remove('open'));
+  }
+
+  function bindHabitInteractions() {
+    document.querySelectorAll('#habits-track [data-toggle]').forEach(el => {
+      el.addEventListener('click', () => {
+        const h = OrrynData.habits.find(x => x.id === el.dataset.toggle);
+        if (!h) return;
+        h.done = !h.done;
+        renderTrackHabits();
+        updateTodayStats();
+        renderWeek();
+      });
+    });
+
+    document.querySelectorAll('#habits-track [data-menu-toggle]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = btn.dataset.menuToggle;
+        const menu = document.querySelector(`#habits-track .row-menu[data-menu="${id}"]`);
+        const wasOpen = menu.classList.contains('open');
+        closeAllMenus();
+        if (!wasOpen) menu.classList.add('open');
+      });
+    });
+
+    document.querySelectorAll('#habits-track [data-edit]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeAllMenus();
+        openEditHabit(btn.dataset.edit);
+      });
+    });
+
+    document.querySelectorAll('#habits-track [data-delete]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeAllMenus();
+        const id = btn.dataset.delete;
+        const h = OrrynData.habits.find(x => x.id === id);
+        if (confirm(`Supprimer l'habitude « ${h.label} » ?`)) {
+          const idx = OrrynData.habits.findIndex(x => x.id === id);
+          OrrynData.habits.splice(idx, 1);
+          renderTrackHabits();
+          updateTodayStats();
+          renderWeek();
+        }
+      });
+    });
+  }
+
+  document.addEventListener('click', () => closeAllMenus());
+
+  function updateTodayStats() {
+    const done = OrrynData.habits.filter(h => h.done).length;
+    const total = OrrynData.habits.length;
+    const pct = total ? Math.round(done / total * 100) : 0;
+    document.getElementById('today-done').textContent = done;
+    document.getElementById('today-total').textContent = total;
+    document.getElementById('stat-today-pct').textContent = pct;
+    document.getElementById('stat-today-bar').style.width = pct + '%';
+  }
+
+  /* SEGMENTS matin/soir */
+  document.querySelectorAll('.segment-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.segment-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentMoment = btn.dataset.moment;
+      renderTrackHabits();
+    });
+  });
+
+  /* GRILLE SEMAINE */
+  function renderWeek() {
+    const now = new Date();
+    const todayIdx = (now.getDay() + 6) % 7; // 0 = lundi ... 6 = dimanche
+    const monday = new Date(now); monday.setDate(now.getDate() - todayIdx);
+
+    const header = document.getElementById('week-header');
+    const letters = ['L','M','M','J','V','S','D'];
+    let headerHtml = '<span></span>';
+    for (let i = 0; i < 7; i++) {
+      const d = new Date(monday); d.setDate(monday.getDate() + i);
+      const isToday = d.toDateString() === now.toDateString();
+      headerHtml += `<div class="week-daycol ${isToday ? 'today' : ''}"><div class="wd">${letters[i]}</div><div class="dn">${d.getDate()}</div></div>`;
+    }
+    headerHtml += '<span class="week-score-head">Score</span>';
+    header.innerHTML = headerHtml;
+
+    const sunday = new Date(monday); sunday.setDate(monday.getDate() + 6);
+    document.getElementById('week-range').textContent = `Du ${monday.getDate()} au ${sunday.getDate()} ${monthsFull[sunday.getMonth()]}`;
+
+    const rows = document.getElementById('week-rows');
+    rows.innerHTML = '';
+    OrrynData.habits.forEach(h => {
+      let cells = '';
+      for (let i = 0; i < 7; i++) {
+        let cls;
+        if (i < todayIdx)       cls = 'skipped';                  // jour passé : pas d'historique encore
+        else if (i === todayIdx) cls = h.done ? 'done' : 'skipped'; // aujourd'hui : reflète la coche
+        else                     cls = 'future';                  // à venir
+        cells += `<div class="week-cell ${cls}"></div>`;
+      }
+      const pct = h.done ? 100 : 0; // score basé sur aujourd'hui uniquement
+      const row = document.createElement('div');
+      row.className = 'week-row';
+      row.innerHTML = `<span class="week-row-label">${h.label}</span>${cells}<span class="week-row-score">${pct}%</span>`;
+      rows.appendChild(row);
+    });
+  }
+
+  /* HEATMAP MOIS */
+  function renderMonth() {
+    const now = new Date();
+    const today = now.getDate();
+    const year = now.getFullYear();
+    const month = now.getMonth();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const firstDow = (new Date(year, month, 1).getDay() + 6) % 7; // décalage lundi
+
+    document.getElementById('month-eyebrow').textContent = monthsFull[month].charAt(0).toUpperCase() + monthsFull[month].slice(1) + ' ' + year;
+
+    const grid = document.getElementById('month-grid');
+    grid.innerHTML = '';
+
+    // cellules vides avant le 1er
+    for (let i = 0; i < firstDow; i++) {
+      const empty = document.createElement('div');
+      grid.appendChild(empty);
+    }
+
+    let successCount = 0;
+    for (let day = 1; day <= daysInMonth; day++) {
+      const cell = document.createElement('div');
+      cell.className = 'month-cell';
+      const isFuture = day > today;
+      const isToday = day === today;
+
+      if (isFuture) {
+        cell.style.background = '#fff';
+        cell.style.border = '1px dashed #E5E7EB';
+        cell.innerHTML = `<span style="color:#D1D5DB;">${day}</span>`;
+      } else {
+        const intensity = monthIntensities[(day - 1) % monthIntensities.length];
+        const pal = intensityPalette[intensity];
+        if (intensity >= 3) successCount++;
+        cell.style.background = pal.bg;
+        if (isToday) cell.style.border = '2px solid #047857';
+        cell.innerHTML = `<span style="color:${pal.color};">${day}</span>${isToday ? '<span class="today-dot"></span>' : ''}`;
+      }
+      grid.appendChild(cell);
+    }
+
+    document.getElementById('month-success').textContent = `${successCount} / ${daysInMonth}`;
+  }
+
+  /* STREAK DOTS */
+  function renderStreakDots() {
+    const c = document.getElementById('streak-dots');
+    for (let i = 0; i < 7; i++) {
+      const dot = document.createElement('span');
+      dot.className = 'streak-dot';
+      c.appendChild(dot);
+    }
+  }
+
+  /* DATE HEADER */
+  function setTodayLabel() {
+    document.getElementById('today-label').textContent = getTodayLabel();
+  }
+
+  /* MODAL HABITUDE (ajout / édition) */
+  let editingHabitId = null;
+  let draftMoment = 'matin';
+
+  function setMomentButtons(moment) {
+    document.querySelectorAll('#habit-moment-selector .priority-btn').forEach(b => b.classList.toggle('active', b.dataset.moment === moment));
+  }
+
+  document.querySelectorAll('#habit-moment-selector .priority-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      setMomentButtons(btn.dataset.moment);
+      draftMoment = btn.dataset.moment;
+    });
+  });
+
+  document.getElementById('btn-add-habit').addEventListener('click', () => {
+    editingHabitId = null;
+    document.getElementById('habit-modal-eyebrow').textContent = 'Nouveau';
+    document.getElementById('habit-modal-title').textContent = 'Habitude';
+    document.getElementById('btn-save-habit').textContent = "Créer l'habitude";
+    document.getElementById('habit-draft-label').value = '';
+    document.getElementById('habit-draft-detail').value = '';
+    document.getElementById('habit-draft-time').value = '07:00';
+    draftMoment = 'matin';
+    setMomentButtons('matin');
+    openModal('habit-modal');
+    setTimeout(() => document.getElementById('habit-draft-label').focus(), 100);
+  });
+
+  function openEditHabit(id) {
+    const h = OrrynData.habits.find(x => x.id === id);
+    if (!h) return;
+    editingHabitId = id;
+    document.getElementById('habit-modal-eyebrow').textContent = 'Modifier';
+    document.getElementById('habit-modal-title').textContent = 'Habitude';
+    document.getElementById('btn-save-habit').textContent = 'Enregistrer';
+    document.getElementById('habit-draft-label').value = h.label;
+    document.getElementById('habit-draft-detail').value = (h.detail === 'Nouvelle habitude') ? '' : h.detail;
+    document.getElementById('habit-draft-time').value = h.time || '07:00';
+    draftMoment = h.moment || 'matin';
+    setMomentButtons(draftMoment);
+    openModal('habit-modal');
+    setTimeout(() => document.getElementById('habit-draft-label').focus(), 100);
+  }
+
+  document.getElementById('btn-save-habit').addEventListener('click', () => {
+    const label = document.getElementById('habit-draft-label').value.trim();
+    if (!label) { document.getElementById('habit-draft-label').focus(); return; }
+    const detail = document.getElementById('habit-draft-detail').value.trim();
+    const time = document.getElementById('habit-draft-time').value || '';
+
+    if (editingHabitId !== null) {
+      const h = OrrynData.habits.find(x => x.id === editingHabitId);
+      if (h) {
+        h.label = label;
+        h.detail = detail || 'Nouvelle habitude';
+        h.time = time;
+        h.moment = draftMoment;
+      }
+    } else {
+      OrrynData.habits.push({
+        id: 'h' + Date.now(),
+        label,
+        detail: detail || 'Nouvelle habitude',
+        time,
+        streak: 0,
+        done: false,
+        moment: draftMoment,
+      });
+    }
+    closeModal('habit-modal');
+    renderTrackHabits();
+    updateTodayStats();
+    renderWeek();
+  });
+
+  /* INIT — après connexion + chargement cloud */
+  initOrrynPage(() => {
+    initModals();
+    setTodayLabel();
+    renderStreakDots();
+    renderTrackHabits();
+    updateTodayStats();
+    renderWeek();
+    renderMonth();
+  });
+</script>
+
+</body>
+</html>

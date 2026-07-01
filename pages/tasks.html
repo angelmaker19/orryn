@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orryn — Tâches</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="app-wrapper">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">O</div>
+
+    <a class="sidebar-nav-btn" data-page="dashboard" href="../index.html" title="Dashboard">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>
+    </a>
+    <a class="sidebar-nav-btn active" data-page="tasks" href="tasks.html" title="Tâches">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+    </a>
+    <a class="sidebar-nav-btn" data-page="mindset" href="mindset.html" title="Mindset">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2a4.5 4.5 0 0 0-4.5 4.5c0 .76.18 1.47.5 2.1A4 4 0 0 0 4 12a4 4 0 0 0 1.5 3.1c-.32.6-.5 1.3-.5 2A3.9 3.9 0 0 0 9 21a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3z"/><path d="M15 2a4.5 4.5 0 0 1 4.5 4.5c0 .76-.18 1.47-.5 2.1A4 4 0 0 1 20 12a4 4 0 0 1-1.5 3.1c.32.6.5 1.3.5 2A3.9 3.9 0 0 1 15 21a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3z"/></svg>
+    </a>
+    <a class="sidebar-nav-btn" data-page="routine" href="routine.html" title="Routine">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.2-8.55"/><path d="M21 3v6h-6"/><path d="M12 7v5l3 2"/></svg>
+    </a>
+    <a class="sidebar-nav-btn" data-page="projects" href="projects.html" title="Projets">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+    </a>
+
+    <div class="sidebar-spacer"></div>
+
+    <a class="sidebar-nav-btn settings-btn" title="Paramètres">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </a>
+    <div class="sidebar-avatar">SM</div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content" style="gap:40px;">
+
+    <!-- HEADER -->
+    <header class="page-header" style="align-items:flex-end;">
+      <div class="page-header-left">
+        <span class="page-header-eyebrow" id="scope-label">Espace perso</span>
+        <h1>Mes tâches.</h1>
+        <p class="page-header-tagline"><strong style="color:var(--ink); font-weight:600;" id="active-count">0 en cours</strong> · <span id="done-count">0</span> terminées.</p>
+      </div>
+      <div class="page-header-right">
+        <div class="toggle-switch">
+          <div class="toggle-indicator"></div>
+          <button class="active">Perso</button>
+          <button>Pro</button>
+        </div>
+        <button class="btn-primary" id="btn-new-task">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          Nouvelle tâche
+        </button>
+      </div>
+    </header>
+
+    <!-- FILTERS -->
+    <div class="filters-row">
+      <div class="filter-group" id="filter-group">
+        <button class="filter-pill active" data-filter="all">Toutes <span class="filter-badge">0</span></button>
+        <button class="filter-pill" data-filter="today">Aujourd'hui <span class="filter-badge">0</span></button>
+        <button class="filter-pill" data-filter="urgent">Urgent <span class="filter-badge">0</span></button>
+        <button class="filter-pill" data-filter="done">Fait <span class="filter-badge">0</span></button>
+      </div>
+      <div class="search-box">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="search-input" placeholder="Rechercher…">
+      </div>
+    </div>
+
+    <!-- TASK LIST -->
+    <section class="tasks-list-card" id="tasks-list">
+      <!-- Rempli par JS -->
+    </section>
+
+    <div class="tasks-hint">
+      <span>Astuce :</span>
+      <kbd>N</kbd>
+      <span>nouvelle tâche ·</span>
+      <kbd>⌘ K</kbd>
+      <span>recherche</span>
+    </div>
+  </main>
+</div>
+
+<!-- MODAL NOUVELLE TÂCHE -->
+<div class="modal-overlay" id="task-modal">
+  <div class="modal" style="max-width:540px;">
+    <div class="modal-header">
+      <div>
+        <span class="section-eyebrow" id="modal-eyebrow">Nouveau</span>
+        <h2 class="modal-title" style="font-size:28px;" id="modal-title">Tâche</h2>
+      </div>
+      <button class="modal-close" data-close-modal="task-modal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Titre</label>
+      <input type="text" class="form-input" id="draft-title" placeholder="Ex. Préparer la réunion de lundi">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Description <span style="color:#9CA3AF; font-weight:500; text-transform:none; letter-spacing:0;">— optionnel</span></label>
+      <textarea class="form-textarea" id="draft-desc" placeholder="Ajoute du contexte, des sous-étapes…"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Priorité</label>
+      <div class="priority-selector" id="priority-selector">
+        <button class="priority-btn urgent" data-priority="urgent">Urgent</button>
+        <button class="priority-btn medium active" data-priority="medium">Moyen</button>
+        <button class="priority-btn normal" data-priority="normal">Normal</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Échéance</label>
+      <div class="priority-selector" id="date-selector">
+        <button class="priority-btn normal active" data-dday="0">Aujourd'hui</button>
+        <button class="priority-btn normal" data-dday="1">Demain</button>
+        <button class="priority-btn normal" data-dday="4">Cette semaine</button>
+        <button class="priority-btn normal" data-dday="">Aucune</button>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn-ghost" data-close-modal="task-modal">Annuler</button>
+      <button class="btn-primary" id="btn-create-task">Créer la tâche</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/supabase-config.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/auth.js"></script>
+<script>
+  let currentFilter = 'all';
+  let searchTerm = '';
+  let draftPriority = 'medium';
+  let draftDDay = 0;
+  let editingId = null; // null = création, sinon id de la tâche en édition
+
+  function isTodayLike(dDay) { return dDay === 0 || dDay === 1; }
+
+  /* Vue unifiée des tâches d'un espace.
+     - Perso : uniquement les tâches autonomes (OrrynData.tasks).
+     - Pro   : tâches autonomes pro + toutes les tâches des projets (point 4).
+     Chaque élément renvoyé est un "wrapper" normalisé qui pointe vers l'objet réel,
+     pour que cocher/éditer modifie bien la source. */
+  function unifiedTasks() {
+    const scope = OrrynData.currentScope;
+    const out = [];
+    // Tâches autonomes de l'espace courant
+    OrrynData.tasks.filter(t => t.scope === scope).forEach(t => {
+      out.push({
+        ref: t, source: 'task', id: 't:' + t.id,
+        title: t.title, description: t.description || '',
+        done: t.done, priority: t.priority, dDay: t.dDay, dueDate: null,
+        projectName: t.project || null, projectPaused: false, editable: true,
+      });
+    });
+    // En Pro : on ajoute les tâches de tous les projets pro
+    if (scope === 'pro') {
+      OrrynData.projects.filter(p => p.scope === 'pro').forEach(p => {
+        (p.tasks || []).forEach(t => {
+          out.push({
+            ref: t, source: 'project', id: 'p:' + p.id + ':' + t.id, projId: p.id,
+            title: t.title, description: t.desc || '',
+            done: t.done, priority: (t.tag === 'high' ? 'urgent' : t.tag === 'med' ? 'medium' : 'normal'),
+            dDay: null, dueDate: t.dueDate || null,
+            projectName: p.name, projectPaused: p.status === 'paused', editable: false,
+          });
+        });
+      });
+    }
+    return out;
+  }
+
+  // Opère sur les wrappers unifiés. "today" et "urgent" utilisent la logique d'échéance réelle.
+  function filterFn(w) {
+    const n = taskDaysLeft(w);
+    if (currentFilter === 'all')    return !w.done;
+    if (currentFilter === 'today')  return !w.done && n !== null && n <= 1;
+    if (currentFilter === 'urgent') return !w.done && isTaskUrgent(w);
+    if (currentFilter === 'done')   return w.done;
+    return true;
+  }
+
+  function matchesSearch(w) {
+    if (!searchTerm) return true;
+    const q = searchTerm.toLowerCase();
+    return w.title.toLowerCase().includes(q) || (w.description || '').toLowerCase().includes(q);
+  }
+
+  const priorityTag = {
+    urgent: { label: 'Urgent', bg: '#FEF2F2', color: '#DC2626' },
+    medium: { label: 'Moyen',  bg: '#FFFBEB', color: '#B45309' },
+    normal: { label: 'Normal', bg: '#F0F5F2', color: '#5B6B68' },
+  };
+
+  // Renvoie un libellé d'échéance à partir du wrapper (dDay OU dueDate).
+  function dateDisplay(w) {
+    if (w.done) return null;
+    const n = taskDaysLeft(w);
+    if (n === null) return null;
+    if (n < 0) return { label: 'En retard' };
+    if (n === 0) return { label: "Aujourd'hui" };
+    if (n === 1) return { label: 'Demain' };
+    if (n < 7) return { label: 'Cette semaine' };
+    return { label: 'J-' + n };
+  }
+
+  function updateCounts() {
+    const tasks = unifiedTasks();
+    const counts = {
+      all:    tasks.filter(w => !w.done).length,
+      today:  tasks.filter(w => !w.done && taskDaysLeft(w) !== null && taskDaysLeft(w) <= 1).length,
+      urgent: tasks.filter(w => !w.done && isTaskUrgent(w)).length,
+      done:   tasks.filter(w => w.done).length,
+    };
+    document.querySelectorAll('.filter-pill').forEach(pill => {
+      pill.querySelector('.filter-badge').textContent = counts[pill.dataset.filter];
+    });
+
+    const active = counts.all;
+    const done = counts.done;
+    document.getElementById('active-count').textContent = active + ' en cours';
+    document.getElementById('done-count').textContent = done;
+  }
+
+  // Construit le HTML d'une ligne de tâche à partir d'un wrapper
+  function taskRowHtml(w) {
+    const tag = priorityTag[w.priority] || priorityTag.normal;
+    const date = dateDisplay(w);
+    const urgent = isTaskUrgent(w);
+    const rowCls = ('task-list-row ' + urgentRowClass(w)).trim();
+
+    const dateHtml = urgent
+      ? urgentBadgeHtml(w)
+      : `<span class="task-date" style="${date ? '' : 'visibility:hidden;'}">${date ? `<span class="task-dot"></span>${date.label}` : ''}</span>`;
+
+    // Menu : seulement pour les tâches éditables (autonomes). Les tâches de projet
+    // se gèrent dans la page Projets, donc pas de menu ici (juste un lien).
+    const menuHtml = w.editable
+      ? `<div class="row-menu-wrap">
+          <button class="task-menu-btn" data-menu-toggle="${w.id}">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
+          </button>
+          <div class="row-menu" data-menu="${w.id}">
+            <button data-edit="${w.id}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              Modifier
+            </button>
+            <button class="danger" data-delete="${w.id}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg>
+              Supprimer
+            </button>
+          </div>
+        </div>`
+      : `<a class="task-open-proj" href="projects.html?project=${w.projId}&task=${encodeURIComponent(w.ref.id)}" title="Ouvrir dans le projet">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </a>`;
+
+    const handleHtml = w.editable
+      ? `<span class="drag-handle" title="Glisser pour réordonner"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="9" cy="6" r="1.6"/><circle cx="15" cy="6" r="1.6"/><circle cx="9" cy="12" r="1.6"/><circle cx="15" cy="12" r="1.6"/><circle cx="9" cy="18" r="1.6"/><circle cx="15" cy="18" r="1.6"/></svg></span>`
+      : '<span class="drag-handle-spacer"></span>';
+    return `
+      ${handleHtml}
+      <button class="task-check-btn task-check ${w.done ? 'done' : ''}" data-check="${w.id}" style="border-width:1.5px; padding:0;">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" style="display:${w.done ? '' : 'none'}"><polyline points="20 6 9 17 4 12"/></svg>
+      </button>
+      <div class="task-list-main">
+        <div class="task-list-titlerow">
+          <span class="task-title rich-text ${w.done ? 'done' : ''}">${w.title}</span>
+          ${w.projectName ? `<span class="task-project-tag${w.projectPaused ? ' paused' : ''}"><span class="pt-dot"></span>${w.projectName}${w.projectPaused ? ' · en pause' : ''}</span>` : ''}
+        </div>
+        <span class="task-desc rich-text ${w.done ? 'done' : ''}">${w.description}</span>
+      </div>
+      ${dateHtml}
+      <span class="task-tag" style="background:${w.done ? '#F3F4F6' : tag.bg}; color:${w.done ? '#9CA3AF' : tag.color};">${tag.label}</span>
+      ${menuHtml}
+    `;
+  }
+
+  function renderTasks() {
+    const list = document.getElementById('tasks-list');
+    // On affiche dans l'ordre du tableau (point 5 : trié une fois à l'init, puis manuel via drag).
+    const visible = unifiedTasks().filter(filterFn).filter(matchesSearch);
+    list.innerHTML = '';
+
+    if (visible.length === 0) {
+      list.innerHTML = `
+        <div class="tasks-empty">
+          <h3>Rien à voir ici.</h3>
+          <p>Aucune tâche dans ce filtre. Profite du moment.</p>
+        </div>`;
+    } else {
+      visible.forEach((w) => {
+        const row = document.createElement('div');
+        row.className = ('task-list-row ' + urgentRowClass(w)).trim();
+        row.dataset.wid = w.id;
+        row.innerHTML = taskRowHtml(w);
+        list.appendChild(row);
+      });
+    }
+
+    // Point 3 : bloc "dernières tâches terminées" (sauf quand on est déjà sur le filtre Fait)
+    if (currentFilter !== 'done') renderRecentDone(list);
+
+    bindUnifiedToggles();
+    bindRowMenus();
+
+    // Point 6 : glisser-déposer pour réordonner (uniquement les tâches autonomes non filtrées).
+    // On rend les lignes éditables déplaçables et on réordonne OrrynData.tasks de l'espace.
+    if (currentFilter === 'all' && !searchTerm) {
+      const rows = Array.from(list.querySelectorAll('.task-list-row')).filter(r => {
+        const w = unifiedTasks().find(x => x.id === r.dataset.wid);
+        return w && w.editable && !w.done;
+      });
+      rows.forEach(r => r.draggable = true);
+      enableTaskReorder(list, rows);
+    }
+  }
+
+  /* Réordonne les tâches autonomes de l'espace courant via drag & drop */
+  function enableTaskReorder(list, rows) {
+    const scope = OrrynData.currentScope;
+    // Ordre actuel des ids réels affichés (dans l'ordre du DOM)
+    const orderedRealIds = () => rows.map(r => {
+      const w = unifiedTasks().find(x => x.id === r.dataset.wid);
+      return w ? w.ref.id : null;
+    }).filter(v => v !== null);
+
+    enableListReorder(list, '.task-list-row[draggable="true"]', (from, to) => {
+      const ids = orderedRealIds();
+      const movedId = ids[from];
+      // Retire la tâche déplacée de OrrynData.tasks puis la réinsère à la bonne position
+      const arr = OrrynData.tasks;
+      const movedIdx = arr.findIndex(t => t.id === movedId);
+      if (movedIdx < 0) return;
+      const [moved] = arr.splice(movedIdx, 1);
+      // Position cible = juste avant la tâche qui occupe l'index "to" (dans la liste visible)
+      const targetId = ids[to];
+      let targetIdx = arr.findIndex(t => t.id === targetId);
+      if (targetIdx < 0) targetIdx = arr.length;
+      arr.splice(targetIdx, 0, moved);
+      persistOrryn();
+      renderTasks();
+    });
+  }
+
+  /* POINT 3 : dernières tâches terminées (7 max), repliable via un bouton discret */
+  let showRecentDone = false;
+  function renderRecentDone(list) {
+    const done = unifiedTasks().filter(w => w.done);
+    if (done.length === 0) return;
+    // Les plus récemment terminées d'abord : on garde l'ordre inverse d'apparition
+    const recent = done.slice().reverse().slice(0, 7);
+
+    const wrap = document.createElement('div');
+    wrap.className = 'recent-done-wrap';
+    wrap.innerHTML = `
+      <button class="recent-done-toggle" id="recent-done-toggle">
+        <svg class="rd-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        Dernières tâches terminées (${done.length > 7 ? '7 sur ' + done.length : done.length})
+      </button>
+      <div class="recent-done-list" id="recent-done-list" style="display:none;"></div>
+    `;
+    list.appendChild(wrap);
+
+    const rdList = wrap.querySelector('#recent-done-list');
+    recent.forEach(w => {
+      const row = document.createElement('div');
+      row.className = 'task-list-row recent-done-row';
+      row.dataset.wid = w.id;
+      row.innerHTML = taskRowHtml(w);
+      rdList.appendChild(row);
+    });
+
+    const toggleBtn = wrap.querySelector('#recent-done-toggle');
+    if (showRecentDone) { rdList.style.display = ''; toggleBtn.classList.add('open'); }
+    toggleBtn.addEventListener('click', () => {
+      showRecentDone = !showRecentDone;
+      rdList.style.display = showRecentDone ? '' : 'none';
+      toggleBtn.classList.toggle('open', showRecentDone);
+    });
+    // Les cases à cocher des tâches récentes doivent aussi fonctionner
+    bindUnifiedToggles();
+  }
+
+  /* Coche/décoche une tâche (autonome OU projet) et sauvegarde */
+  function bindUnifiedToggles() {
+    document.querySelectorAll('[data-check]').forEach(btn => {
+      if (btn.dataset.bound) return;
+      btn.dataset.bound = '1';
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const wid = btn.dataset.check;
+        const w = unifiedTasks().find(x => x.id === wid);
+        if (!w) return;
+        w.ref.done = !w.ref.done;
+        persistOrryn();
+        refreshAll();
+      });
+    });
+  }
+
+  /* MENUS MODIFIER / SUPPRIMER */
+  function closeAllMenus() {
+    document.querySelectorAll('.row-menu.open').forEach(m => m.classList.remove('open'));
+  }
+
+  function bindRowMenus() {
+    document.querySelectorAll('[data-menu-toggle]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = btn.dataset.menuToggle;
+        const menu = document.querySelector(`.row-menu[data-menu="${id}"]`);
+        const wasOpen = menu.classList.contains('open');
+        closeAllMenus();
+        if (!wasOpen) menu.classList.add('open');
+      });
+    });
+
+    document.querySelectorAll('[data-edit]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeAllMenus();
+        const realId = parseInt(btn.dataset.edit.replace('t:', ''));
+        openEditModal(realId);
+      });
+    });
+
+    document.querySelectorAll('[data-delete]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeAllMenus();
+        const id = parseInt(btn.dataset.delete.replace('t:', ''));
+        const task = OrrynData.tasks.find(t => t.id === id);
+        if (task && confirm(`Supprimer la tâche « ${task.title} » ?`)) {
+          const idx = OrrynData.tasks.findIndex(t => t.id === id);
+          OrrynData.tasks.splice(idx, 1);
+          persistOrryn();
+          refreshAll();
+        }
+      });
+    });
+  }
+
+  // Ferme les menus si on clique ailleurs
+  document.addEventListener('click', () => closeAllMenus());
+
+  function refreshAll() {
+    updateCounts();
+    renderTasks();
+  }
+
+  /* FILTRES */
+  document.querySelectorAll('.filter-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      currentFilter = pill.dataset.filter;
+      renderTasks();
+    });
+  });
+
+  /* RECHERCHE */
+  document.getElementById('search-input').addEventListener('input', (e) => {
+    searchTerm = e.target.value;
+    renderTasks();
+  });
+
+  /* MODAL */
+  function setPriorityButtons(priority) {
+    document.querySelectorAll('#priority-selector .priority-btn').forEach(b => b.classList.toggle('active', b.dataset.priority === priority));
+  }
+  function setDateButtons(dday) {
+    const val = dday === null ? '' : String(dday);
+    let matched = false;
+    document.querySelectorAll('#date-selector .priority-btn').forEach(b => {
+      const active = b.dataset.dday === val;
+      b.classList.toggle('active', active);
+      if (active) matched = true;
+    });
+    // si la date ne correspond à aucun bouton, on retombe sur "Aucune"
+    if (!matched) document.querySelector('#date-selector .priority-btn[data-dday=""]').classList.add('active');
+  }
+
+  function resetDraft() {
+    editingId = null;
+    document.getElementById('modal-eyebrow').textContent = 'Nouveau';
+    document.getElementById('modal-title').textContent = 'Tâche';
+    document.getElementById('btn-create-task').textContent = 'Créer la tâche';
+    document.getElementById('draft-title').value = '';
+    document.getElementById('draft-desc').value = '';
+    draftPriority = 'medium';
+    draftDDay = 0;
+    setPriorityButtons('medium');
+    setDateButtons(0);
+  }
+
+  function openEditModal(id) {
+    const t = OrrynData.tasks.find(x => x.id === id);
+    if (!t) return;
+    editingId = id;
+    document.getElementById('modal-eyebrow').textContent = 'Modifier';
+    document.getElementById('modal-title').textContent = 'Tâche';
+    document.getElementById('btn-create-task').textContent = 'Enregistrer';
+    document.getElementById('draft-title').value = t.title;
+    document.getElementById('draft-desc').value = (t.description === 'Pas de description.') ? '' : t.description;
+    draftPriority = t.priority;
+    draftDDay = t.dDay;
+    setPriorityButtons(t.priority);
+    setDateButtons(t.dDay);
+    openModal('task-modal');
+    setTimeout(() => document.getElementById('draft-title').focus(), 100);
+  }
+
+  document.getElementById('btn-new-task').addEventListener('click', () => {
+    resetDraft();
+    openModal('task-modal');
+    setTimeout(() => document.getElementById('draft-title').focus(), 100);
+  });
+
+  document.querySelectorAll('#priority-selector .priority-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#priority-selector .priority-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      draftPriority = btn.dataset.priority;
+    });
+  });
+
+  document.querySelectorAll('#date-selector .priority-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#date-selector .priority-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      draftDDay = btn.dataset.dday === '' ? null : parseInt(btn.dataset.dday);
+    });
+  });
+
+  document.getElementById('btn-create-task').addEventListener('click', () => {
+    const title = document.getElementById('draft-title').value.trim();
+    if (!title) {
+      document.getElementById('draft-title').focus();
+      return;
+    }
+    const desc = document.getElementById('draft-desc').value.trim();
+
+    if (editingId !== null) {
+      // mise à jour
+      const t = OrrynData.tasks.find(x => x.id === editingId);
+      if (t) {
+        t.title = title;
+        t.description = desc || 'Pas de description.';
+        t.dDay = draftDDay;
+        t.priority = draftPriority;
+      }
+    } else {
+      // création
+      const newId = Math.max(0, ...OrrynData.tasks.map(t => t.id)) + 1;
+      OrrynData.tasks.unshift({
+        id: newId,
+        title,
+        description: desc || 'Pas de description.',
+        dDay: draftDDay,
+        done: false,
+        priority: draftPriority,
+        scope: OrrynData.currentScope,
+        project: null,
+      });
+    }
+    persistOrryn();
+    closeModal('task-modal');
+    refreshAll();
+  });
+
+  /* RACCOURCI N */
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'n' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+      e.preventDefault();
+      document.getElementById('btn-new-task').click();
+    }
+    if (e.key === 'Escape') closeModal('task-modal');
+  });
+
+  /* TOGGLE PERSO/PRO */
+  function applyScope(scope) {
+    document.getElementById('scope-label').textContent = scope === 'pro' ? 'Espace pro' : 'Espace perso';
+    currentFilter = 'all';
+    document.querySelectorAll('.filter-pill').forEach(p => p.classList.toggle('active', p.dataset.filter === 'all'));
+    refreshAll();
+  }
+
+  /* Point 5 : tri auto par urgence UNE SEULE FOIS (au chargement), ensuite l'ordre
+     manuel (drag) est respecté. On réordonne le tableau OrrynData.tasks en place. */
+  function sortTasksOnceByUrgency() {
+    const perso = sortByUrgency(OrrynData.tasks.filter(t => t.scope === 'perso'));
+    const pro   = sortByUrgency(OrrynData.tasks.filter(t => t.scope === 'pro'));
+    const rest  = OrrynData.tasks.filter(t => t.scope !== 'perso' && t.scope !== 'pro');
+    OrrynData.tasks = perso.concat(pro, rest);
+  }
+
+  /* INIT — après connexion + chargement cloud */
+  initOrrynPage(() => {
+    initModals();
+    sortTasksOnceByUrgency();
+    initToggle(applyScope);
+    refreshAll();
+  });
+</script>
+
+</body>
+</html>
